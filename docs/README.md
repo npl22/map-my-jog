@@ -1,14 +1,10 @@
 # JogLog
 
-This is the development README and is separate from the production
-README in the root folder. This document will
+[Heroku link][heroku]
+[Trello link][trello]
 
-* show wireframes
-* describe features
-* outline a development timeline for your application.
-
-Your docs directory should contain the following files which will be
-linked in this readme.
+[heroku]: http://www.herokuapp.com
+[trello]: https://trello.com/b/ALgfuX0Q/freshernote
 
 ## Design Docs
 
