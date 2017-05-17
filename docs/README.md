@@ -25,15 +25,15 @@ sufficient CSS styling:
 
 * [View Wireframes][wireframes]
 * [React Components][components]
-* [API Endpoints][api-endpoints]
+* [API Endpoints][api_endpoints]
 * [DB Schema][schema]
 * [Sample State][sample state]
 
 [wireframes]: docs/wireframes
 [components]: docs/component-hierarchy.md
-[api-endpoints]: docs/api-endpoints.md
+[api_endpoints]: docs/api_endpoints.md
 [schema]: docs/schema.md
-[sample-state]: docs/sample_state.md
+[sample_state]: docs/sample_state.md
 
 ## Implementation Timeline
 
