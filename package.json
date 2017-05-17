@@ -21,8 +21,13 @@
     "webpack": "^2.5.1"
   },
   "devDependencies": {},
+  "engines": {
+    "node": "6.10.1",
+    "npm": "3.10.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack",
     "webpack": "webpack --watch"
   },
   "repository": {
