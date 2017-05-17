@@ -27,7 +27,7 @@ sufficient CSS styling:
 * [React Components][components]
 * [API Endpoints][api_endpoints]
 * [DB Schema][schema]
-* [Sample State][sample state]
+* [Sample State][sample_state]
 
 [wireframes]: docs/wireframes
 [components]: docs/component-hierarchy.md
