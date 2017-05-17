@@ -37,30 +37,26 @@ sufficient CSS styling:
 
 ## Implementation Timeline
 
-### Phase 1: Backend setup and Front End User Authentication (2 days)
+### Phase 1: Backend setup and Front End User Authentication (2 days, Wed, May 17)
 
 **Objective:** Functioning rails project with front-end Authentication
 
-### Phase 2: Notes Model, API, and components (2 days)
+### Phase 2: Running routes (3 days, Sat, May 20)
 
-**Objective:** Notes can be created, read, edited and destroyed through
+**Objective:** Routes can be created, read, edited and destroyed through
 the API.
 
-### Phase 3: Notebooks (2 days)
+### Phase 3: Following, Activity Feed, Comments (2 days, Mon, May 22)
 
-**Objective:** Notes belong to Notebooks that can be created, read, edited and destroyed through the API.
+**Objective:** Users can follow each other, see activity of users they've followed, and comment on others' activity
 
-### Phase 4: Tags (1 day)
+### Phase 4: Dashboard, (2 days, Wed, May 24)
 
-**Objective:** Notes can be tagged with multiple tags, and tags are searchable.
+**Objective:** Users will be able to log their runs and see stats on a dashboard.
 
-### Phase 5: Allow Complex Styling in Notes (1 day, W2 Th 6pm)
+### Phase 5: Complex Styling, (2 days, Fri May 26)
 
-**Objective:** Allow rich text editing of notes.
-
-### Phase 6: - Pagination / infinite scroll for Notes Index (1 day, W2 F 6pm)
-
-**Objective:** Add infinite scroll to Notes Index
+**Objective:** Make styling look more professional, add final touches.
 
 ### Bonus Features (TBD)
 - [ ] Revamp look of MayMyRun into something better
