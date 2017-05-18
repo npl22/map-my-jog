@@ -1,4 +1,4 @@
-## Component Hierarchy
+# Component Hierarchy
 
 **LoginFormContainer**
  - LoginForm
@@ -9,7 +9,7 @@
 **SplashPageContainer**
  - SplashPage
 
-### Homepage
+## Homepage
 
 **HomePageContainer**
  - HomePage
@@ -32,7 +32,7 @@
  - RecentRoutes
   + RecentRouteItem
 
-### Create a Route
+## Create a Route
 
 **CreateRouteContainer**
  - CreateRoute
@@ -54,7 +54,7 @@
 **RouteContainer**
   - Route
 
-### Find a Route
+## Find a Route
 
 **FindRouteContainer**
  - FindRoute
@@ -74,7 +74,7 @@
  - SearchResults
   + SearchResult
 
-### View a Route
+## View a Route
 
 **RouteDetailContainer**
  - RouteDetail
