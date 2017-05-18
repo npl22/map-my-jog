@@ -32,7 +32,7 @@
  + RecentRoutes
   + RecentRouteItem
 
-## Create a Route
+## Creating Routes
 
 **CreateRouteContainer**
  + CreateRoute
@@ -54,7 +54,7 @@
 **RouteContainer**
   + Route
 
-## Find a Route
+## Finding Routes
 
 **FindRouteContainer**
  + FindRoute
@@ -74,7 +74,7 @@
  + SearchResults
   + SearchResult
 
-## View a Route
+## Viewing Routes
 
 **RouteDetailContainer**
  + RouteDetail
@@ -88,12 +88,12 @@
 
 |Path   | Component   |
 |-------|-------------|
-| "/" | "SplashPageContainer" |
-| "/sign-up" | "LoginFormContainer" |
-| "/log-in" | "LoginFormContainer" |
-| "/home" | "HomePageContainer" |
-| "/home/activity-feed" | "ActivityFeedContainer" |
-| "/home/dashboard" | "DashboardContainer" |
-| "/create-route" | "CreateRouteContainer" |
-| "/find-route" | "FindRouteContainer" |
-| "/route/:routeId" | "RouteDetailContainer" |
+| / | SplashPageContainer |
+| /sign-up | LoginFormContainer |
+| /log-in | LoginFormContainer |
+| /home | HomePageContainer |
+| /home/activity-feed | ActivityFeedContainer |
+| /home/dashboard | DashboardContainer |
+| /create-route | CreateRouteContainer |
+| /find-route | FindRouteContainer |
+| /route/:routeId | RouteDetailContainer |
