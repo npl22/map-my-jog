@@ -1,88 +1,88 @@
 # Component Hierarchy
 
 **LoginFormContainer**
- - LoginForm
+ + LoginForm
 
 **NavBarContainer**
- - NavBar
+ + NavBar
 
 **SplashPageContainer**
- - SplashPage
+ + SplashPage
 
 ## Homepage
 
 **HomePageContainer**
- - HomePage
+ + HomePage
   + ActivityFeedContainer
   + DashboardContainer
 
 **ActivityFeedContainer**
- - ActivityFeed
+ + ActivityFeed
   + ActivityFeedItem
 
 **DashboardContainer**
- - Dashboard
+ + Dashboard
   + DashboardStatsContainer
   + RecentRoutesContainer
 
 **DashboardStatsContainer**
- - DashboardStats
+ + DashboardStats
 
 **RecentRoutesContainer**
- - RecentRoutes
+ + RecentRoutes
   + RecentRouteItem
 
 ## Create a Route
 
 **CreateRouteContainer**
- - CreateRoute
+ + CreateRoute
   + MapSidePanelContainer
   + Map
   + RouteContainer
 
 **MapSidePanelContainer**
- - MapSidePanel
+ + MapSidePanel
   + SearchSidePanelContainer
   + RouteStatsContainer
 
 **SearchSidePanelContainer**
- - SearchSidePanel
+ + SearchSidePanel
 
 **RouteStatsContainer**
- - RouteStats
+ + RouteStats
 
 **RouteContainer**
-  - Route
+  + Route
 
 ## Find a Route
 
 **FindRouteContainer**
- - FindRoute
+ + FindRoute
   + SearchFormContainer
   + Map
   + MapNodesContainer
   + SearchResultsContainer
 
 **SearchFormContainer**
- - SearchForm
+ + SearchForm
 
 **MapNodesContainer**
- - MapNodes
-  - MapNode
+ + MapNodes
+  + MapNode
 
 **SearchResultsContainer**
- - SearchResults
+ + SearchResults
   + SearchResult
 
 ## View a Route
 
 **RouteDetailContainer**
- - RouteDetail
+ + RouteDetail
   + RouteStatsContainer
   + Map
 
 **RouteStatsContainer**
- - RouteStats
+ + RouteStats
 
 ## Routes
 
