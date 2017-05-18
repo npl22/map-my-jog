@@ -3,8 +3,10 @@
 **LoginFormContainer**
 + LoginForm
 
-**NavBarContainer**
+**NavBarContainer (every page)**
 + NavBar
+
+**Footer (every page)**
 
 **SplashPageContainer**
 + SplashPage
@@ -22,15 +24,9 @@
 
 **DashboardContainer**
 + Dashboard
-    + DashboardStatsContainer
-    + RecentRoutesContainer
-
-**DashboardStatsContainer**
-+ DashboardStats
-
-**RecentRoutesContainer**
-+ RecentRoutes
-    + RecentRouteItem
+    + DashboardStats
+    + RecentRoutes
+        + RecentRouteItem
 
 ## Creating Routes
 
@@ -38,51 +34,30 @@
 + CreateRoute
     + MapSidePanelContainer
     + Map
-    + RouteContainer
 
 **MapSidePanelContainer**
 + MapSidePanel
-    + SearchSidePanelContainer
-    + RouteStatsContainer
+    + SearchContainer
+    + RouteStats
 
-**SearchSidePanelContainer**
-+ SearchSidePanel
-
-**RouteStatsContainer**
-+ RouteStats
-
-**RouteContainer**
-+ Route
+**SearchContainer**
++ Search
 
 ## Finding Routes
 
 **FindRouteContainer**
 + FindRoute
-    + SearchFormContainer
+    + SearchContainer
     + Map
-    + MapNodesContainer
-    + SearchResultsContainer
-
-**SearchFormContainer**
-+ SearchForm
-
-**MapNodesContainer**
-+ MapNodes
-    + MapNode
-
-**SearchResultsContainer**
-+ SearchResults
-    + SearchResult
+    + SearchResults
+        + SearchResult
 
 ## Viewing Routes
 
 **RouteDetailContainer**
 + RouteDetail
-    + RouteStatsContainer
+    + RouteStats
     + Map
-
-**RouteStatsContainer**
-+ RouteStats
 
 ## Routes
 
