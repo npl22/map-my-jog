@@ -30,7 +30,7 @@ sufficient CSS styling:
 * [DB Schema][schema]
 * [Sample State][sample_state]
 
-[wireframes]: ./wireframes.md
+[wireframes]: ./wireframes/
 [components]: ./component_hierarchy.md
 [api_endpoints]: ./api_endpoints.md
 [schema]: ./schema.md
