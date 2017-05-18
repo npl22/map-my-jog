@@ -1,88 +1,88 @@
 # Component Hierarchy
 
 **LoginFormContainer**
- + LoginForm
++ LoginForm
 
 **NavBarContainer**
- + NavBar
++ NavBar
 
 **SplashPageContainer**
- + SplashPage
++ SplashPage
 
 ## Homepage
 
 **HomePageContainer**
- + HomePage
-  + ActivityFeedContainer
-  + DashboardContainer
++ HomePage
+    + ActivityFeedContainer
+    + DashboardContainer
 
 **ActivityFeedContainer**
- + ActivityFeed
-  + ActivityFeedItem
++ ActivityFeed
+    + ActivityFeedItem
 
 **DashboardContainer**
- + Dashboard
-  + DashboardStatsContainer
-  + RecentRoutesContainer
++ Dashboard
+    + DashboardStatsContainer
+    + RecentRoutesContainer
 
 **DashboardStatsContainer**
- + DashboardStats
++ DashboardStats
 
 **RecentRoutesContainer**
- + RecentRoutes
-  + RecentRouteItem
++ RecentRoutes
+    + RecentRouteItem
 
 ## Creating Routes
 
 **CreateRouteContainer**
- + CreateRoute
-  + MapSidePanelContainer
-  + Map
-  + RouteContainer
++ CreateRoute
+    + MapSidePanelContainer
+    + Map
+    + RouteContainer
 
 **MapSidePanelContainer**
- + MapSidePanel
-  + SearchSidePanelContainer
-  + RouteStatsContainer
++ MapSidePanel
+    + SearchSidePanelContainer
+    + RouteStatsContainer
 
 **SearchSidePanelContainer**
- + SearchSidePanel
++ SearchSidePanel
 
 **RouteStatsContainer**
- + RouteStats
++ RouteStats
 
 **RouteContainer**
-  + Route
++ Route
 
 ## Finding Routes
 
 **FindRouteContainer**
- + FindRoute
-  + SearchFormContainer
-  + Map
-  + MapNodesContainer
-  + SearchResultsContainer
++ FindRoute
+    + SearchFormContainer
+    + Map
+    + MapNodesContainer
+    + SearchResultsContainer
 
 **SearchFormContainer**
- + SearchForm
++ SearchForm
 
 **MapNodesContainer**
- + MapNodes
-  + MapNode
++ MapNodes
+    + MapNode
 
 **SearchResultsContainer**
- + SearchResults
-  + SearchResult
++ SearchResults
+    + SearchResult
 
 ## Viewing Routes
 
 **RouteDetailContainer**
- + RouteDetail
-  + RouteStatsContainer
-  + Map
++ RouteDetail
+    + RouteStatsContainer
+    + Map
 
 **RouteStatsContainer**
- + RouteStats
++ RouteStats
 
 ## Routes
 
