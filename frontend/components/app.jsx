@@ -1,6 +1,9 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 
+import { AuthRoute } from '../util/route_util';
+import SessionFormContainer from './session_form/session_form_container';
+
 const App = () => (
   <div>
     <Switch>
@@ -9,3 +12,5 @@ const App = () => (
     </Switch>
   </div>
 );
+
+export default App;
