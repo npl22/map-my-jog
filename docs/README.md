@@ -30,11 +30,11 @@ sufficient CSS styling:
 * [DB Schema][schema]
 * [Sample State][sample_state]
 
-[wireframes]: docs/wireframes
-[components]: docs/component-hierarchy.md
-[api_endpoints]: docs/api_endpoints.md
-[schema]: docs/schema.md
-[sample_state]: docs/sample_state.md
+[wireframes]: ./wireframes
+[components]: ./component-hierarchy.md
+[api_endpoints]: ./api_endpoints.md
+[schema]: ./schema.md
+[sample_state]: ./sample_state.md
 
 ## Implementation Timeline
 
