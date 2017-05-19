@@ -4,8 +4,6 @@ import HeroPanel from './hero_panel';
 import FeaturePanel from './feature_panel';
 import CitiesPanel from './cities_panel';
 
-// <div id="signup" style="position: relative;">
-
 const SplashPage = () => (
   <section id="page_content" className="content">
     <section id="homepage_hero">
@@ -18,12 +16,12 @@ const SplashPage = () => (
                 You pound the pavement, we provide the motivation. Plan each stride and <br />learn from every route with MapMyRun.
             </p>
             <div id="signup">
-                <a className="button large facebook" href="https://www.mapmyrun.com/auth/signup/" id="home_facebook_signup">
-                    Sign up with Facebook
+                <a href="#" id="home_facebook_signup">
+                    Sign Up
                 </a>
             </div>
             <div className="login_prompt">
-                Already a member? <a id="login_btn" className="button dk" href="https://www.mapmyrun.com/auth/login/">Log in</a>
+                Already a member? <a id="login_btn" href="#">Log in</a>
             </div>
             <p>
                 By joining JogLog, you agree to the
@@ -66,7 +64,7 @@ const SplashPage = () => (
         </div>
     </section>
     <section id="local">
-        <div className="container SL_swap" id="homepage_cities_list">
+        <div className="container" id="homepage_cities_list">
             <h3>FIND GREAT RUNS IN THESE POPULAR CITIES</h3>
             <div className="home-column-container">
                 <div className="city-columns">
