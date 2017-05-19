@@ -2,5 +2,10 @@ html, body, section, div {
   margin: 0;
   padding: 0;
   border: 0;
+  font: inherit;
   background: transparent;
+}
+
+a, a:visited {
+  color: inherit;
 }
