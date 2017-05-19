@@ -21,6 +21,7 @@
 **ActivityFeedContainer**
 + ActivityFeed
     + ActivityFeedItem
+        + Comment
 
 **DashboardContainer**
 + Dashboard
