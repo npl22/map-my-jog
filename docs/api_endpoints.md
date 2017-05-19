@@ -30,6 +30,5 @@
 
 ### Comments
 - `POST /api/comments`
-- `GET /api/comments/:id`
 - `PATCH /api/comments/:id`
 - `DELETE /api/comments/:id`

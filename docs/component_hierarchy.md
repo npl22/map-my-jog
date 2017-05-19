@@ -21,7 +21,12 @@
 **ActivityFeedContainer**
 + ActivityFeed
     + ActivityFeedItem
-        + Comment
+        + CommentContainer
+
+**CommentContainer**
++ CommentForm
++ Comments
+    + Comment
 
 **DashboardContainer**
 + Dashboard
@@ -59,6 +64,7 @@
 + RouteDetail
     + RouteStats
     + Map
++ CommentContainer
 
 ## Routes
 
