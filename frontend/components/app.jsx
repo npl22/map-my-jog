@@ -3,12 +3,12 @@ import { Route, Link, Switch } from 'react-router-dom';
 
 // import NavBar from './nav_bar'
 import SplashPage from './splash_page';
-import { AuthRoute } from '../util/route_util';
-import SessionFormContainer from './session_form/session_form_container';
+// import { AuthRoute } from '../util/route_util';
+// import SessionFormContainer from './session_form/session_form_container';
 
 const App = () => (
   <div>
-    <Route exact path="/" component={SplashPageContainer}></Route>
+    <Route exact path="/" component={SplashPage}></Route>
     <Switch>
 
     </Switch>
