@@ -1,37 +1,6 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
-body {
-  background: #fff repeat 0 0;
-  font-family: "Open Sans", sans-serif;
-  font-size: 12px;
-  height: 100%;
-  min-height: 100%;
-  color: #666;
-}
-
-h1 {
-   font: 30px/16px "Open Sans", sans-serif;
-   text-transform: uppercase;
-   color: #444;
-   font-weight: 600;
-   line-height: 1;
-}
-
 #homepage-hero {
+  position: relative;
+
   width: 100vw;
   height: 70vh;
   background-image: url(http://res.cloudinary.com/nathanpli/image/upload/v1495227712/hero_img_btdzi2.png);
@@ -39,14 +8,23 @@ h1 {
   background-size: cover;
 }
 
+#homepage-hero .hero-img-content {
+  height: 100%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+}
+
 #homepage-hero h1 {
   color: white;
+  font-size: 3.25vw;
+  line-height: 1.2;
+  font-weight: 600;
 }
 
 #homepage-hero p {
   color: white;
   margin-top: 10px;
-  font-size: 14px;
 }
 
 #homepage-hero .button {
@@ -54,7 +32,7 @@ h1 {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 
-  font: 13px/16px "Open Sans", sans-serif;
+  font: 16px "Open Sans", sans-serif;
   text-transform: uppercase;
   color: #fff;
   font-family: "Open Sans", sans-serif;
@@ -66,6 +44,10 @@ h1 {
   cursor: pointer;
 }
 
+#homepage-hero #signup {
+  margin-top: 5%;
+}
+
 #home-sign-up-btn {
   background: linear-gradient(to bottom, #4499db 5%, #177ed7 100%);
 }
@@ -75,6 +57,7 @@ h1 {
 }
 
 #homepage-hero .login-prompt {
+  margin-top: 150px;
   text-align: right;
   color: #fff;
   font-size: 15px;
@@ -85,6 +68,23 @@ h1 {
   background: linear-gradient(to bottom, #5b5b5b 5%, #454545 100%);
 }
 
+#home-login-btn a {
+  font-size: 24px;
+}
+
 #home-login-btn:hover {
     background: linear-gradient(to bottom, #4f4f4f 5%, #222222 100%);
+}
+
+#homepage-hero .terms-of-service {
+  margin-left: 150px;
+  background-color: rgba(100, 100, 100, 0.5);
+  border-radius: 5px;
+  max-width: 30vw;
+  text-align: center;
+}
+
+#homepage-hero .terms-of-service p, a {
+  font-size: 0.85vw;
+  white-space: nowrap;
 }
