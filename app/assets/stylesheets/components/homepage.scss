@@ -1,8 +1,10 @@
+// Hero image panel-----------------------------------------
 #homepage-hero {
   position: relative;
 
   width: 100vw;
   height: 70vh;
+  min-height: 275px;
   background-image: url(http://res.cloudinary.com/nathanpli/image/upload/v1495227712/hero_img_btdzi2.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,6 +15,9 @@
   position: absolute;
   top: 10%;
   left: 50%;
+
+  display: flex;
+  flex-direction: column;
 }
 
 #homepage-hero h1 {
@@ -57,34 +62,65 @@
 }
 
 #homepage-hero .login-prompt {
-  margin-top: 150px;
   text-align: right;
   color: #fff;
   font-size: 15px;
   font-weight: 600;
+
+  margin: auto 12% 12% 20%;
 }
 
-#home-login-btn {
+#homepage-hero .login-prompt a {
+  font-size: 13px;
+}
+
+#homepage-hero #home-login-btn {
+  margin-left: 5px;
+  padding: 5.5px 18px;
   background: linear-gradient(to bottom, #5b5b5b 5%, #454545 100%);
 }
 
-#home-login-btn a {
-  font-size: 24px;
-}
-
 #home-login-btn:hover {
-    background: linear-gradient(to bottom, #4f4f4f 5%, #222222 100%);
+  background: linear-gradient(to bottom, #4f4f4f 5%, #222222 100%);
 }
 
 #homepage-hero .terms-of-service {
-  margin-left: 150px;
-  background-color: rgba(100, 100, 100, 0.5);
-  border-radius: 5px;
-  max-width: 30vw;
-  text-align: center;
+  font-weight: normal;
+  text-align: right;
 }
 
-#homepage-hero .terms-of-service p, a {
-  font-size: 0.85vw;
+#homepage-hero .terms-of-service p {
+  display: inline-block;
+  background-color: rgba(100, 100, 100, 0.5);
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  margin-top: 6%;
+  font-size: 10.5px;
   white-space: nowrap;
+}
+
+#homepage-hero .terms-of-service a {
+  font-size: 10.5px;
+  white-space: nowrap;
+}
+
+// Temp Panels (will replace later)-------------------------
+#homepage-features {
+  width: 100vw;
+  height: 50vh;
+  min-height: 250px;
+  background-image: url(http://res.cloudinary.com/nathanpli/image/upload/v1495410800/temp_panel1_lstf54.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#homepage-cities-list {
+  width: 100vw;
+  height: 100vh;
+  min-height: 275px;
+  background-image: url(http://res.cloudinary.com/nathanpli/image/upload/v1495410803/temp_panel2_entvjd.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
