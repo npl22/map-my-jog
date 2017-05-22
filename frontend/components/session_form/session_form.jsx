@@ -53,10 +53,25 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
+
           <p>or {this.navLink()}</p>
           {this.renderErrors()}
+
           <div className="login-form">
+            <input className='login guest-login'
+                   type="submit"
+                   value="Login as Guest" />
+
             <br/>
+
+            <div className="or">
+              <span className="horizontal-line"></span>
+              <span className="orText">or</span>
+              <span class="horizontal-line"></span>
+            </div>
+
+            <br/>
+
             <label for="username">
               <input id="username" type="text"
                 value={this.state.username}
@@ -65,7 +80,9 @@ class SessionForm extends React.Component {
                 placeholder="Username"
               />
             </label>
+
             <br/>
+
             <label for="password">
               <input id="password" type="password"
                 value={this.state.password}
@@ -74,9 +91,12 @@ class SessionForm extends React.Component {
                 placeholder="Password"
               />
             </label>
+
             <br/>
+
             <input className='login' type="submit" value="Login" />
           </div>
+
         </form>
       </div>
     );
