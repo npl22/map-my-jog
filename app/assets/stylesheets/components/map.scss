@@ -1,0 +1,22 @@
+#map-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#map {
+  width: 75vw;
+  height: 100vh;
+}
+
+#map-side-panel {
+  border: 3px solid black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#map-side-panel h1 {
+  text-align: center;
+  margin-top: -35%;
+}
