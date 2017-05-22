@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.guestLogin = this.guestLogin.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -27,6 +28,11 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     this.props.processForm({user});
+  }
+
+  guestLogin(e) {
+    const user = { username: 'guest', password: 'password' };
+    this.props.guestLogin({user});
   }
 
   navLink() {
@@ -58,16 +64,15 @@ class SessionForm extends React.Component {
           {this.renderErrors()}
 
           <div className="login-form">
-            <input className='login guest-login'
-                   type="submit"
-                   value="Login as Guest" />
+            <button className='login guest-login'
+                    onClick={this.guestLogin}>Login as Guest</button>
 
             <br/>
 
-            <div className="or">
+            <div className="or-divider">
               <span className="horizontal-line"></span>
-              <span className="orText">or</span>
-              <span class="horizontal-line"></span>
+              <span id="or-divider-text">or</span>
+              <span className="horizontal-line"></span>
             </div>
 
             <br/>
