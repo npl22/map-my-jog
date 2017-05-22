@@ -2,11 +2,10 @@ import React from 'react';
 
 const NavBar = () => (
   <nav>
-    <a class="nav-logo" href="/">
-      <h1>MapMyRun</h1>
-    </a>
-
     <ul>
+      <li>
+        <a className="nav-logo" href="/"></a>
+      </li>
       <li>
         <a href="/find-route">Find Routes</a>
       </li>
@@ -21,7 +20,7 @@ const NavBar = () => (
       </li>
     </ul>
 
-    <ul>
+    <ul className="nav-login-signup">
       <li>
         <a href="/login">Log In</a>
       </li>

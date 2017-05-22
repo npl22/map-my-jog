@@ -1,0 +1,27 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 50px;
+  white-space: nowrap;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-logo {
+  padding: 100px;
+  background: transparent url(http://res.cloudinary.com/nathanpli/image/upload/v1495415330/logo_xkm7yl.svg) center center no-repeat;
+}
+
+.nav-login-signup {
+  margin-right: 5%;
+}
