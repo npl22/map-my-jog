@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HeroPanel = () => (
   <section id="homepage-hero">
@@ -9,12 +10,12 @@ const HeroPanel = () => (
               You pound the pavement, we provide the motivation. Plan each stride and <br />learn from every route with MapMyRun.
           </p>
           <div id="signup">
-              <a href="#" className="button" id="home-sign-up-btn">
+              <Link to="/signup" className="button" id="home-sign-up-btn">
                   Sign Up
-              </a>
+              </Link>
           </div>
           <div className="login-prompt">
-              Already a member? <a className="button" id="home-login-btn" href="#">Log in</a>
+              Already a member? <Link className="button" id="home-login-btn" to="/login">Log in</Link>
               <span className="terms-of-service">
                 <p>
                     By joining MapMyJog, you agree to the&nbsp;
