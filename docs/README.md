@@ -4,7 +4,7 @@
 
 [Trello link][trello]
 
-[heroku]: https://jog-log-map-my-run.herokuapp.com/
+[heroku]: https://map-my-jog.herokuapp.com/
 [trello]: https://trello.com/b/L51z982t/mapmyrun-clone
 
 ## Minimum Viable Product
