@@ -1,4 +1,4 @@
-# JogLog
+# MapMyJog
 
 [Heroku link][heroku]
 
@@ -9,7 +9,7 @@
 
 ## Minimum Viable Product
 
-JogLog is a clone of MapMyRun that will be built using Ruby on Rails
+MapMyJog is a clone of MapMyRun that will be built using Ruby on Rails
 and React/Redux. In two weeks, this app will, satisfy the
 following criteria with smooth, bug-free navigation, adequate seed data and
 sufficient CSS styling:

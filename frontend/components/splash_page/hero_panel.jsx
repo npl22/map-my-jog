@@ -17,7 +17,7 @@ const HeroPanel = () => (
               Already a member? <a className="button" id="home-login-btn" href="#">Log in</a>
               <span className="terms-of-service">
                 <p>
-                    By joining JogLog, you agree to the&nbsp;
+                    By joining MapMyJog, you agree to the&nbsp;
                     <a href="#">Terms &amp; Conditions</a>
                      &nbsp;and&nbsp;
                     <a href="#">Privacy Policy</a>
