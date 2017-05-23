@@ -7,34 +7,41 @@ class CreateRoute extends React.Component {
 
     // testing
     this.state.waypoints = [
-      { lat: 37.803072, lng: -122.460548 },
-      { lat: 37.803564, lng: -122.466921 },
-      { lat: 37.807938, lng: -122.471127 },
-      { lat: 37.804255, lng: -122.454149 }
+      { location: { lat: 37.803072, lng: -122.460548 } },
+      { location: { lat: 37.803564, lng: -122.466921 } },
+      { location: { lat: 37.807938, lng: -122.471127 } },
+      { location: { lat: 37.804255, lng: -122.454149 } }
     ];
   }
 
-  componentDidMount() {
-    const mapOptions = {
-      center: { lat: 37.8029111, lng: -122.4632558 },
-      zoom: 15
-    };
-    this.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+componentDidMount() {
+  const mapOptions = {
+    center: { lat: 37.8029111, lng: -122.4632558 },
+    zoom: 15
+  };
+  this.map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-    const directionsService = new google.maps.DirectionsService;
-    const directionsDisplay = new google.maps.DirectionsRenderer;
+  const directionsService = new google.maps.DirectionsService;
+  const directionsDisplay = new google.maps.DirectionsRenderer;
 
-    const path = new google.maps.Polyline({
-      path: this.state.waypoints,
-      geodesic: true,
-      draggable: true,
-      strokeColor: '#0000FF',
-      strokeOpacity: 1.0,
-      strokeWeight: 2
-    });
+  directionsDisplay.setMap(this.map);
 
-    path.setMap(this.map);
-  }
+  const routeData = {
+    origin: this.state.waypoints[0].location,
+    destination: this.state.waypoints[3].location,
+    waypoints: this.state.waypoints,
+    optimizeWaypoints: false,
+    travelMode: 'WALKING'
+  };
+
+  directionsService.route(routeData, function(response, status) {
+    if (status === 'OK') {
+      directionsDisplay.setDirections(response);
+    } else {
+      window.alert('Directions request failed due to ' + status);
+    }
+  });
+}
 
   handleSubmit(e) {
     e.preventDefault();
