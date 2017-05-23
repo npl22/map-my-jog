@@ -14,7 +14,7 @@ class SessionForm extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
-      this.props.history.push('/home');
+      this.props.history.push('/create-route');
     }
   }
 

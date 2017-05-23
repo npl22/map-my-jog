@@ -5,14 +5,14 @@ import {
   RECEIVE_ERRORS
 } from '../actions/session_actions';
 
-// const initialState = Object.freeze({
-//   title: "",
-//   waypoints: [],
-//   user_id: null,
-//   errors: []
-// });
+const initialState = Object.freeze({
+  title: "",
+  waypoints: [],
+  user_id: null,
+  errors: []
+});
 
-const routeReducer = (state, action) => {
+const routeReducer = (state = initialState, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_ROUTE:
