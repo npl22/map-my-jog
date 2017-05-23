@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20170523002517) do
 
   create_table "routes", force: :cascade do |t|
     t.string   "title",      null: false
-    t.json     "waypoints",  null: false, array: true
+    t.string   "waypoints",  null: false
     t.integer  "user_id",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
