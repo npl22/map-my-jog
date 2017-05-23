@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CitiesPanel = () => (
-  <section className="container" id="homepage-cities-list">
+  <section>
   </section>
 );
 

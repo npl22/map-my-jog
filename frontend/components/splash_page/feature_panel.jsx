@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FeaturePanel = () => (
-  <section id="homepage-features">
+  <section>
   </section>
 );
 

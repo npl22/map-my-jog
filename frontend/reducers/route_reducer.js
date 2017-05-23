@@ -12,7 +12,7 @@ import {
 //   errors: []
 // });
 
-const sessionReducer = (state, action) => {
+const routeReducer = (state, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_ROUTE:
@@ -21,7 +21,7 @@ const sessionReducer = (state, action) => {
       return merge({}, state, route);
     case RECEIVE_ERRORS:
       const errors = action.errors;
-      return merge({}, nullUser, {
+      return merge({}, state, {
         errors
       });
     default:
@@ -29,4 +29,4 @@ const sessionReducer = (state, action) => {
   }
 };
 
-export default sessionReducer;
+export default routeReducer;
