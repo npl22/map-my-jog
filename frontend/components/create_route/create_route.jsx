@@ -54,6 +54,7 @@ componentDidMount() {
       <section id='map-container'>
         <section id='map-side-panel'>
           <h1>Map Side Panel</h1>
+          <button onClick={this.props.logout}>Log Out</button>
         </section>
         <section id='map'>
         </section>
