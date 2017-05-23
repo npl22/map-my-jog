@@ -8,3 +8,13 @@
 
 # Guest login
 User.create(username: 'guest', password: 'password')
+
+# Routes
+Route.create(title: 'Presidio/Crissy Field',
+             waypoints: [
+               { location: { lat: 37.803072, lng: -122.460548 } },
+               { location: { lat: 37.803564, lng: -122.466921 } },
+               { location: { lat: 37.807938, lng: -122.471127 } },
+               { location: { lat: 37.804255, lng: -122.454149 } }
+             ],
+             user_id: 1)
