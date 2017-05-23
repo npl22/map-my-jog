@@ -12,7 +12,7 @@
 
 class Route < ApplicationRecord
   validates :title, presence: true
-  validates :waypoints, length: { minimum: 2, message: 'Route is too short' }
+  validates :waypoints, length: { minimum: 2, message: ', route is too short' }
   validates :title, uniqueness:
     { scope: :user, message: 'You already have a route with than name' }
 
