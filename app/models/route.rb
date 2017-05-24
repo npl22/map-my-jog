@@ -11,7 +11,7 @@
 #
 
 class Route < ApplicationRecord
-  validates :title, :waypoints, presence: true
+  validates :title, :waypoints, :distance, presence: true
   validates :title, uniqueness:
     { scope: :user, message: 'You already have a route with than name' }
 

@@ -18,7 +18,7 @@ class CreateRoute extends React.Component {
   constructor(props) {
     super(props);
     const user_id = this.props.session.currentUser.id;
-    this.state = { title: "", user_id, waypoints: [] };
+    this.state = { title: "", user_id, distance: "", waypoints: [] };
     this.updateTitle = this.updateTitle.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -66,6 +66,8 @@ class CreateRoute extends React.Component {
       <section id='map-container'>
         <section id='map-side-panel'>
           <h1>Map Side Panel</h1>
+          <h3>Distance</h3>
+          <h3>{this.state.distance}</h3>
           <form onSubmit={this.handleSubmit}>
             <label>Title:
               <input type="text"
