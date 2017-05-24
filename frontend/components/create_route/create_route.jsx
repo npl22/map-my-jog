@@ -6,8 +6,11 @@ import Route from './route';
 class CreateRoute extends React.Component {
   constructor(props) {
     super(props);
+
     const user_id = this.props.session.currentUser.id;
     this.state = { title: "", user_id, distance: 0, waypoints: [] };
+    this.firstMarker = null;
+
     this.updateTitle = this.updateTitle.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -29,9 +32,8 @@ class CreateRoute extends React.Component {
 
 
     this.map.addListener('click', e => {
-      // add marker for first click
       if (this.state.waypoints.length === 0) {
-        const marker = new google.maps.Marker({ // eslint-disable-line
+        this.firstMarker = new google.maps.Marker({ // eslint-disable-line
           map: this.map,
           position: e.latLng,
           animation: google.maps.Animation.DROP //eslint-disable-line
@@ -45,6 +47,7 @@ class CreateRoute extends React.Component {
 
       if (this.state.waypoints.length > 1) {
         route.getDirections(this.state.waypoints);
+        this.firstMarker.setMap(null);
         this.setState({ distance: route.distance });
       }
     });

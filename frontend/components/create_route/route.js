@@ -58,7 +58,6 @@ class Route {
     }
 
     // make last one animate
-    console.log(route.legs);
     const marker = new google.maps.Marker({ // eslint-disable-line
       map: this.map,
       position: route.legs[route.legs.length-1].end_location,
