@@ -29,27 +29,14 @@ class CreateRoute extends React.Component {
     this.map = new google.maps.Map(document.getElementById('map'), mapOptions); // eslint-disable-line
     const route = new Route(this.map, this.setState.bind(this));
 
-
-
     this.map.addListener('click', e => {
-      if (this.state.waypoints.length === 0) {
-        this.firstMarker = new google.maps.Marker({ // eslint-disable-line
-          map: this.map,
-          position: e.latLng,
-          animation: google.maps.Animation.DROP //eslint-disable-line
-        });
-      }
-
       const lat = e.latLng.lat();
       const lng = e.latLng.lng();
       const waypoints = this.state.waypoints;
       this.setState({ waypoints: [...waypoints, { location: { lat, lng } }]});
 
-      if (this.state.waypoints.length > 1) {
-        route.getDirections(this.state.waypoints);
-        this.firstMarker.setMap(null);
-        this.setState({ distance: route.distance });
-      }
+      route.getDirections(this.state.waypoints);
+      this.setState({ distance: route.distance });
     });
   }
 
