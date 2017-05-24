@@ -1,7 +1,7 @@
 import React from 'react';
 
-// import MapSidePanel from './map-side-panel';
-import Route from './route';
+// import SidePanel from './side_panel';
+// import Route from './route';
 
 // testing
 // this.state.waypoints = [
@@ -17,24 +17,19 @@ import Route from './route';
 class CreateRoute extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { title: "", user_id: null, waypoints: [] };
-
-    this.addWaypoint = this.addWaypoint.bind(this);
-    this.setState = this.setState.bind(this);
+    const user_id = this.props.session.currentUser.id;
+    this.state = { title: "", user_id, waypoints: [] };
+    this.updateTitle = this.updateTitle.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
     const initialPosition = { lat: 37.8029111, lng: -122.4632558 };
     const zoom = 15;
-    this.createMap(initialPosition, zoom);
+    this.initializeMap(initialPosition, zoom);
   }
 
-  addWaypoint() {
-    console.log("hello");
-  }
-
-  createMap(initialPosition, zoom) {
+  initializeMap(initialPosition, zoom) {
     const mapOptions = {
       center: initialPosition,
       zoom
@@ -48,13 +43,21 @@ class CreateRoute extends React.Component {
       const lat = e.latLng.lat();
       const lng = e.latLng.lng();
       const waypoints = this.state.waypoints;
-
       this.setState({ waypoints: [...waypoints, { location: { lat, lng } }]});
+      console.log(this.state);
     });
   }
 
+  updateTitle(e) {
+    this.setState({ title: e.target.value });
+    console.log(this.state);
+  }
+
   handleSubmit(e) {
-    const route = this.state;
+    const route = { title: this.state.title,
+                    waypoints: JSON.stringify(this.state.waypoints),
+                    user_id: this.state.user_id };
+
     this.props.createRoute({ route });
   }
 
@@ -63,7 +66,16 @@ class CreateRoute extends React.Component {
       <section id='map-container'>
         <section id='map-side-panel'>
           <h1>Map Side Panel</h1>
-          <button onClick={this.handleSubmit}>Save Route</button>
+          <form onSubmit={this.handleSubmit}>
+            <label>Title:
+              <input type="text"
+                     value={this.state.title}
+                     onChange={this.updateTitle}>
+              </input>
+            </label>
+
+            <input type="submit" value="Save Route"></input>
+          </form>
         </section>
         <section id='map'>
         </section>
