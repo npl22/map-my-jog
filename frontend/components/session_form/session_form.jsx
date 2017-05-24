@@ -14,7 +14,7 @@ class SessionForm extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
-      this.props.history.push('/create-route');
+      this.props.history.push('/home');
     }
   }
 
@@ -77,25 +77,21 @@ class SessionForm extends React.Component {
 
             <br/>
 
-            <label for="username">
-              <input id="username" type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-                placeholder="Username"
-              />
-            </label>
+            <input id="username" type="text"
+              value={this.state.username}
+              onChange={this.update('username')}
+              className="login-input"
+              placeholder="Username"
+            />
 
             <br/>
 
-            <label for="password">
-              <input id="password" type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-                placeholder="Password"
-              />
-            </label>
+            <input id="password" type="password"
+              value={this.state.password}
+              onChange={this.update('password')}
+              className="login-input"
+              placeholder="Password"
+            />
 
             <br/>
 

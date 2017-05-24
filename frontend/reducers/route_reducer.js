@@ -2,8 +2,8 @@ import merge from 'lodash/merge';
 
 import {
   RECEIVE_ROUTE,
-  RECEIVE_ERRORS
-} from '../actions/session_actions';
+  RECEIVE_ROUTE_ERRORS
+} from '../actions/route_actions';
 
 const initialState = Object.freeze({
   title: "",
@@ -16,10 +16,11 @@ const routeReducer = (state = initialState, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_ROUTE:
-      const route = action;
-      route.user_id = state.session.currentUser.id;
+      window.action = action;
+      const route = action.route;
+      route.waypoints = JSON.parse(route.waypoints);
       return merge({}, state, route);
-    case RECEIVE_ERRORS:
+    case RECEIVE_ROUTE_ERRORS:
       const errors = action.errors;
       return merge({}, state, {
         errors

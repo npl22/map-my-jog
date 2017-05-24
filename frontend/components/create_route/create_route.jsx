@@ -3,7 +3,8 @@ import React from 'react';
 class CreateRoute extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { title: "", user_id: null, waypoints: [] };
+    this.state = { title: "", user_id: null, waypoints: "" };
+    this.handleSubmit = this.handleSubmit.bind(this);
 
     // testing
     this.state.waypoints = [
@@ -26,10 +27,11 @@ componentDidMount() {
 
   directionsDisplay.setMap(this.map);
 
+  const waypoints = this.state.waypoints;
   const routeData = {
-    origin: this.state.waypoints[0].location,
-    destination: this.state.waypoints[3].location,
-    waypoints: this.state.waypoints,
+    origin: waypoints[0].location,
+    destination: waypoints[waypoints.length - 1].location,
+    waypoints: waypoints,
     optimizeWaypoints: false,
     travelMode: 'WALKING'
   };
@@ -44,9 +46,12 @@ componentDidMount() {
 }
 
   handleSubmit(e) {
-    e.preventDefault();
-    // this.state.user_id = this.props.currentUser.id
-    // this.props.createRoute(this.state)
+    this.state.user_id = this.props.session.currentUser.id;
+    // testing
+    this.state.waypoints = JSON.stringify(this.state.waypoints);
+    this.state.title = "Presidio 2";
+    const route = this.state;
+    this.props.createRoute({ route });
   }
 
   render () {
@@ -54,7 +59,7 @@ componentDidMount() {
       <section id='map-container'>
         <section id='map-side-panel'>
           <h1>Map Side Panel</h1>
-          <button onClick={this.props.logout}>Log Out</button>
+          <button onClick={this.handleSubmit}>Save Route</button>
         </section>
         <section id='map'>
         </section>
