@@ -1,5 +1,6 @@
 import React from 'react';
 
+// import MapSidePanel from './map-side-panel';
 import Route from './route';
 
 // testing
@@ -43,32 +44,13 @@ class CreateRoute extends React.Component {
 
     // this.Route = new Route(this.map, this.props.setState);
 
-    const addWaypoint = (lat, lng) => {
-      const waypoints = this.state.waypoints;
-      waypoints.push({ location: { lat, lng } });
-      this.setState({ waypoints });
-    };
-
     this.map.addListener('click', e => {
-      console.log(e.latLng.lat());
       const lat = e.latLng.lat();
       const lng = e.latLng.lng();
-      addWaypoint(lat, lng);
-      console.log(this.state);
+      const waypoints = this.state.waypoints;
+
+      this.setState({ waypoints: [...waypoints, { location: { lat, lng } }]});
     });
-
-
-
-    //   this.addWaypoint(e.latLng);
-    //   const lat = e.latLng.lat();
-    //   const lng = e.latLng.lng();
-    //   waypoints.push({ location: { lat, lng } });
-      // this.Route.addWaypoint(e.latLng);
-    // });
-  }
-
-  addWaypoint(e) {
-    console.log(e);
   }
 
   handleSubmit(e) {
