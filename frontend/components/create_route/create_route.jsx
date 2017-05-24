@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Route from './route';
+
 // testing
 // this.state.waypoints = [
 //   { location: { lat: 37.803072, lng: -122.460548 } },
@@ -14,39 +16,60 @@ import React from 'react';
 class CreateRoute extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { title: "", user_id: null, waypoints: "" };
+    this.state = { title: "", user_id: null, waypoints: [] };
+
+    this.addWaypoint = this.addWaypoint.bind(this);
+    this.setState = this.setState.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-componentDidMount() {
-  const mapOptions = {
-    center: { lat: 37.8029111, lng: -122.4632558 },
-    zoom: 15
-  };
-  this.map = new google.maps.Map(document.getElementById('map'), mapOptions); // eslint-disable-line
+  componentDidMount() {
+    const initialPosition = { lat: 37.8029111, lng: -122.4632558 };
+    const zoom = 15;
+    this.createMap(initialPosition, zoom);
+  }
 
-  const directionsService = new google.maps.DirectionsService; // eslint-disable-line
-  const directionsDisplay = new google.maps.DirectionsRenderer; // eslint-disable-line
+  addWaypoint() {
+    console.log("hello");
+  }
 
-  directionsDisplay.setMap(this.map);
+  createMap(initialPosition, zoom) {
+    const mapOptions = {
+      center: initialPosition,
+      zoom
+    };
 
-  const waypoints = this.state.waypoints;
-  const routeData = {
-    origin: waypoints[0].location,
-    destination: waypoints[waypoints.length - 1].location,
-    waypoints: waypoints,
-    optimizeWaypoints: false,
-    travelMode: 'WALKING'
-  };
+    this.map = new google.maps.Map(document.getElementById('map'), mapOptions); // eslint-disable-line
 
-  directionsService.route(routeData, function(response, status) {
-    if (status === 'OK') {
-      directionsDisplay.setDirections(response);
-    } else {
-      window.alert('Directions request failed due to ' + status);
-    }
-  });
-}
+    // this.Route = new Route(this.map, this.props.setState);
+
+    const addWaypoint = (lat, lng) => {
+      const waypoints = this.state.waypoints;
+      waypoints.push({ location: { lat, lng } });
+      this.setState({ waypoints });
+    };
+
+    this.map.addListener('click', e => {
+      console.log(e.latLng.lat());
+      const lat = e.latLng.lat();
+      const lng = e.latLng.lng();
+      addWaypoint(lat, lng);
+      console.log(this.state);
+    });
+
+
+
+    //   this.addWaypoint(e.latLng);
+    //   const lat = e.latLng.lat();
+    //   const lng = e.latLng.lng();
+    //   waypoints.push({ location: { lat, lng } });
+      // this.Route.addWaypoint(e.latLng);
+    // });
+  }
+
+  addWaypoint(e) {
+    console.log(e);
+  }
 
   handleSubmit(e) {
     const route = this.state;
@@ -55,7 +78,7 @@ componentDidMount() {
 
   render () {
     return (
-      <section onClick={this.addWaypoint} id='map-container'>
+      <section id='map-container'>
         <section id='map-side-panel'>
           <h1>Map Side Panel</h1>
           <button onClick={this.handleSubmit}>Save Route</button>
