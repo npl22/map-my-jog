@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import SidePanel from './side_panel';
-// import Route from './route';
+import Route from './route';
 
 // testing
 // this.state.waypoints = [
@@ -36,8 +36,7 @@ class CreateRoute extends React.Component {
     };
 
     this.map = new google.maps.Map(document.getElementById('map'), mapOptions); // eslint-disable-line
-
-    // this.Route = new Route(this.map, this.props.setState);
+    const route = new Route(this.map, this.setState);
 
     this.map.addListener('click', e => {
       const lat = e.latLng.lat();
@@ -45,12 +44,15 @@ class CreateRoute extends React.Component {
       const waypoints = this.state.waypoints;
       this.setState({ waypoints: [...waypoints, { location: { lat, lng } }]});
       console.log(this.state);
+
+      if (this.state.waypoints.length > 1) {
+        route.getDirections(this.state.waypoints);
+      }
     });
   }
 
   updateTitle(e) {
     this.setState({ title: e.target.value });
-    console.log(this.state);
   }
 
   handleSubmit(e) {
@@ -64,11 +66,13 @@ class CreateRoute extends React.Component {
   render () {
     return (
       <section id='map-container'>
+
         <section id='map-side-panel'>
           <h1>Map Side Panel</h1>
           <h3>Distance</h3>
           <h3>{this.state.distance}</h3>
           <form onSubmit={this.handleSubmit}>
+
             <label>Title:
               <input type="text"
                      value={this.state.title}
@@ -79,8 +83,10 @@ class CreateRoute extends React.Component {
             <input type="submit" value="Save Route"></input>
           </form>
         </section>
+
         <section id='map'>
         </section>
+
       </section>
     );
   }
