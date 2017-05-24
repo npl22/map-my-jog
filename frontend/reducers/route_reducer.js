@@ -8,6 +8,7 @@ import {
 const initialState = Object.freeze({
   title: "",
   waypoints: [],
+  distance: 0,
   user_id: null,
   errors: []
 });

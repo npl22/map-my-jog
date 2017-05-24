@@ -25,6 +25,6 @@ class Api::RoutesController < ApplicationController
   private
 
   def route_params
-    params.require(:route).permit(:title, :waypoints, :user_id)
+    params.require(:route).permit(:title, :waypoints, :distance, :user_id)
   end
 end
