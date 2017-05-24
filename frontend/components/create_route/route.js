@@ -1,7 +1,7 @@
 class Route {
   constructor(map, setState) {
     this.map = map;
-    this.setState = setState;
+    this.setState = setState.bind(this);
 
     this.directionsService = new google.maps.DirectionsService; // eslint-disable-line
     this.directionsRenderer = new google.maps.DirectionsRenderer; // eslint-disable-line
@@ -11,28 +11,14 @@ class Route {
   }
 
   getDirections(waypoints) {
-    console.log("Start: ", waypoints[0].location);
-    console.log("End: ", waypoints[waypoints.length - 1].location);
-
-    // testing
-    const waypts = [
-      { location: { lat: 37.803072, lng: -122.460548 } },
-      { location: { lat: 37.803564, lng: -122.466921 } },
-      { location: { lat: 37.807938, lng: -122.471127 } },
-      { location: { lat: 37.804255, lng: -122.454149 } }
-    ];
-    // testing
-
     const directionsRequest = {
       origin: waypoints[0],
-      destination: waypoints[waypoints.length - 1],
-      waypoints: waypoints,
+      destination: waypoints[waypoints.length-1],
+      waypoints: waypoints.slice(1, waypoints.length-1),
       optimizeWaypoints: false,
       travelMode: "WALKING",
       unitSystem: google.maps.UnitSystem.IMPERIAL // eslint-disable-line
     };
-
-    console.log("Directions Request: ", directionsRequest);
 
     this.directionsService.route(directionsRequest, (response, status) =>
       this.renderDirections(response, status));
@@ -42,7 +28,8 @@ class Route {
     if (status === 'OK') {
       this.directionsRenderer.setDirections(response);
       const route = response.routes[0];
-      this.setState({ distance: route.legs[0].distance.text });
+      console.log(route.legs[0].distance.value);
+      this.setState({ distance: route.legs[0].distance.value });
     } else {
       window.alert('Directions request failed due to ' + status);
     }
