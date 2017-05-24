@@ -26,16 +26,10 @@ ActiveRecord::Schema.define(version: 20170523002517) do
 
   create_table "users", force: :cascade do |t|
     t.string   "username",        null: false
-    t.string   "email"
-    t.string   "first_name"
-    t.string   "last_name"
     t.string   "password_digest", null: false
     t.string   "session_token",   null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
-    t.index ["first_name"], name: "index_users_on_first_name", using: :btree
-    t.index ["last_name"], name: "index_users_on_last_name", using: :btree
     t.index ["session_token"], name: "index_users_on_session_token", unique: true, using: :btree
     t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
   end

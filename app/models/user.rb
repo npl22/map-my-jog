@@ -4,18 +4,14 @@
 #
 #  id              :integer          not null, primary key
 #  username        :string           not null
-#  email           :string
-#  first_name      :string
-#  last_name       :string
 #  password_digest :string           not null
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#
 
 class User < ApplicationRecord
   validates :password_digest, :session_token, presence: true
-  validates :username, length: { minimum: 4}
+  validates :username, length: { minimum: 4 }
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :session_token, :username, uniqueness: true
   attr_reader :password

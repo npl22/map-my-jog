@@ -4,10 +4,11 @@
 #
 #  id         :integer          not null, primary key
 #  title      :string           not null
-#  waypoints  :json             not null, is an Array
+#  waypoints  :string           not null
 #  user_id    :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#
 
 class Route < ApplicationRecord
   validates :title, :waypoints, presence: true
