@@ -1,5 +1,5 @@
 // Hero image panel-----------------------------------------
-#homepage-hero {
+#splash-page-hero {
   position: relative;
 
   width: 100vw;
@@ -10,7 +10,7 @@
   background-size: cover;
 }
 
-#homepage-hero .hero-img-content {
+#splash-page-hero .hero-img-content {
   height: 100%;
   position: absolute;
   top: 10%;
@@ -20,19 +20,19 @@
   flex-direction: column;
 }
 
-#homepage-hero h1 {
+#splash-page-hero h1 {
   color: white;
   font-size: 3.25vw;
   line-height: 1.2;
   font-weight: 600;
 }
 
-#homepage-hero p {
+#splash-page-hero p {
   color: white;
   margin-top: 10px;
 }
 
-#homepage-hero .button {
+#splash-page-hero .button {
   padding: 9px 18px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -49,19 +49,19 @@
   cursor: pointer;
 }
 
-#homepage-hero #signup {
+#splash-page-hero #signup {
   margin-top: 5%;
 }
 
-#home-sign-up-btn {
+#splash-sign-up-btn {
   background: linear-gradient(to bottom, #4499db 5%, #177ed7 100%);
 }
 
-#home-sign-up-btn:hover {
+#splash-sign-up-btn:hover {
   background: linear-gradient(to bottom, #3f92c6 5%, #0074bc 100%);
 }
 
-#homepage-hero .login-prompt {
+#splash-page-hero .login-prompt {
   text-align: right;
   color: #fff;
   font-size: 15px;
@@ -70,26 +70,26 @@
   margin: auto 12% 12% 20%;
 }
 
-#homepage-hero .login-prompt a {
+#splash-page-hero .login-prompt a {
   font-size: 13px;
 }
 
-#homepage-hero #home-login-btn {
+#splash-page-hero #splash-login-btn {
   margin-left: 5px;
   padding: 5.5px 18px;
   background: linear-gradient(to bottom, #5b5b5b 5%, #454545 100%);
 }
 
-#home-login-btn:hover {
+#splash-login-btn:hover {
   background: linear-gradient(to bottom, #4f4f4f 5%, #222222 100%);
 }
 
-#homepage-hero .terms-of-service {
+#splash-page-hero .terms-of-service {
   font-weight: normal;
   text-align: right;
 }
 
-#homepage-hero .terms-of-service p {
+#splash-page-hero .terms-of-service p {
   display: inline-block;
   background-color: rgba(100, 100, 100, 0.5);
   border-radius: 5px;
@@ -99,13 +99,13 @@
   white-space: nowrap;
 }
 
-#homepage-hero .terms-of-service a {
+#splash-page-hero .terms-of-service a {
   font-size: 10.5px;
   white-space: nowrap;
 }
 
 // Temp Panels (will replace later)-------------------------
-#homepage-features {
+#splash-page-features {
   width: 100vw;
   height: 50vh;
   min-height: 250px;
@@ -115,7 +115,7 @@
   background-size: cover;
 }
 
-#homepage-cities-list {
+#splash-page-cities-list {
   width: 100vw;
   height: 100vh;
   min-height: 275px;

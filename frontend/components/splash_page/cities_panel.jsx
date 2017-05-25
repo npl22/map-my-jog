@@ -7,7 +7,7 @@ const CitiesPanel = () => (
 
 export default CitiesPanel;
 
-// <section className="container" id="homepage-cities-list">
+// <section className="container" id="splash-page-cities-list">
 //   <h3>FIND GREAT RUNS IN THESE POPULAR CITIES</h3>
 //   <div className="city-columns-container">
 //     <div className="city-columns">

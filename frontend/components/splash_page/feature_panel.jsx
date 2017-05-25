@@ -7,7 +7,7 @@ const FeaturePanel = () => (
 
 export default FeaturePanel;
 
-// <section id="homepage-features">
+// <section id="splash-page-features">
 //     <div className="container">
 //         <div className="feature">
 //             <h2>Map Your Route</h2>
