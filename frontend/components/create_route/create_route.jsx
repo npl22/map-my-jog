@@ -9,10 +9,8 @@ class CreateRoute extends React.Component {
 
     const user_id = this.props.session.currentUser.id;
     this.state = { title: "", user_id, distance: 0, waypoints: [] };
-    this.firstMarker = null;
     this.directions = null;
 
-    this.searchLocation = this.searchLocation.bind(this);
     this.getLocation = this.getLocation.bind(this);
     this.updateTitle = this.updateTitle.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,9 +20,29 @@ class CreateRoute extends React.Component {
     const initialPosition = { lat: 37.8029111, lng: -122.4632558 };
     const zoom = 15;
     this.initializeMap(initialPosition, zoom);
+    this.initializeSearchBox();
+  }
 
+  initializeSearchBox() {
     const input = document.getElementById('google-search-box');
-    new google.maps.places.SearchBox(input); // eslint-disable-line
+    const searchBox = new google.maps.places.SearchBox(input); // eslint-disable-line
+    const map = this.map;
+    searchBox.addListener('places_changed', function() {
+      const places = searchBox.getPlaces();
+      if (places.length === 0) return;
+
+      const bounds = new google.maps.LatLngBounds(); // eslint-disable-line
+      places.forEach(function(place) {
+        if (!place.geometry) return;
+
+        if (place.geometry.viewport) {
+          map.fitBounds(place.geometry.viewport);
+        } else {
+          map.setCenter(place.geometry.location);
+          map.setZoom(16);
+        }
+      });
+    });
   }
 
   initializeMap(initialPosition, zoom) {
@@ -51,12 +69,19 @@ class CreateRoute extends React.Component {
     });
   }
 
-  searchLocation(e) {
-    e.preventDefault();
-  }
-
   getLocation() {
+    const map = this.map;
+    const success = response => {
+      const lat = response.coords.latitude;
+      const lng = response.coords.longitude;
+      map.setCenter({ lat, lng });
+      map.setZoom(15);
+    };
+    const error = err => {
+      console.log(err);
+    };
 
+    navigator.geolocation.getCurrentPosition(success, error);
   }
 
   updateTitle(e) {
@@ -76,7 +101,7 @@ class CreateRoute extends React.Component {
       <section id='map-container'>
 
         <section id='map-side-panel'>
-          <form onSubmit={this.searchLocation} id='location-search'>
+          <form id='location-search'>
             <h4>Search Location</h4>
             <p>(address, or city, or zip, etc.)</p>
             <input id="google-search-box" type="text"></input>

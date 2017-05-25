@@ -8,13 +8,10 @@ const NavBar = () => (
         <Link className="nav-logo" to="/"></Link>
       </li>
       <li>
-        <Link to="/find-route">Find Routes</Link>
+        <Link to="/create-route">Create a Route</Link>
       </li>
       <li>
-        <Link to="/create-route">Create Routes</Link>
-      </li>
-      <li>
-        <Link to="/home/activity-feed">Find Friends</Link>
+        <Link to="/home">My Routes</Link>
       </li>
       <li>
         <Link to="/blog/">Blog</Link>

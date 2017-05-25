@@ -32,7 +32,7 @@
   padding: 5px;
 }
 
-#map-side-panel button, input[type=submit] {
+#map-side-panel button, #map-side-panel input[type=submit] {
   padding: 5px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   background: linear-gradient(to bottom, #4499db 5%, #177ed7 100%);
@@ -49,7 +49,7 @@
   margin-top: 10px;
 }
 
-#map-side-panel button:hover, input[type=submit]:hover {
+#map-side-panel button:hover, #map-side-panel input[type=submit]:hover {
   background: linear-gradient(to bottom, #3f92c6 5%, #0074bc 100%);
 }
 
