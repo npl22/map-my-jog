@@ -107,7 +107,11 @@ class CreateRoute extends React.Component {
             <h4>Search Location</h4>
             <p>(address, or city, or zip, etc.)</p>
             <input id="google-search-box" type="text"></input>
-            <input type='submit' value='Search'></input>
+              <div className="or-divider">
+                <span className="horizontal-line"></span>
+                <span id="or-divider-text">or</span>
+                <span className="horizontal-line"></span>
+              </div>
             <button onClick={this.getLocation}>Get Your Location</button>
           </form>
 

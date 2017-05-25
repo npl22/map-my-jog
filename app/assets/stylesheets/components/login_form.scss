@@ -23,30 +23,6 @@
   text-transform: uppercase;
 };
 
-.login-form-container .or-divider {
-  display: flex;
-  align-items: center;
-  margin-top: 14px;
-  font-family: 'PT Sans Narrow', sans-serif;
-  color: rgb(146, 151, 163);
-}
-
-.login-form-container .horizontal-line {
-  display: inline-block;
-  height: 1px;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
-  border: 0;
-  border-bottom: 1px solid #c8c7cc;
-}
-
-.login-form-container .or-divider span {
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 14px;
-}
-
 .login-form-container #or-divider-text {
   margin: 0 10px;
 }
