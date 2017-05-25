@@ -1,4 +1,8 @@
 class Api::RoutesController < ApplicationController
+  def index
+    @routes = Route.all
+  end
+
   def create
     @route = Route.new(route_params)
     if @route.save
