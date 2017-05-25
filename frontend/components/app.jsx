@@ -7,7 +7,6 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SessionFormContainer from './session_form/session_form_container';
 import HomepageContainer from './homepage/homepage_container';
 import CreateRouteContainer from './create_route/create_route_container';
-import FindRouteContainer from './find_route/find_route_container';
 
 const App = () => (
   <div>
@@ -18,7 +17,6 @@ const App = () => (
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <ProtectedRoute path="/home" component={HomepageContainer} />
       <ProtectedRoute path="/create-route" component={CreateRouteContainer} />
-      <ProtectedRoute path="/find-route" component={FindRouteContainer} />
     </Switch>
   </div>
 );
