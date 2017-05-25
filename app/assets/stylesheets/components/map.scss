@@ -58,6 +58,14 @@
   width: 15vw;
 }
 
+.pac-item:first-child {
+  background: linear-gradient(to bottom, #4499db 5%, #177ed7 100%);
+}
+
+.pac-item:first-child span {
+  color: white;
+}
+
 #map-side-panel #location-search p {
   margin-bottom: 10px;
 }
