@@ -10,7 +10,10 @@ class CreateRoute extends React.Component {
     const user_id = this.props.session.currentUser.id;
     this.state = { title: "", user_id, distance: 0, waypoints: [] };
     this.firstMarker = null;
+    this.directions = null;
 
+    this.searchLocation = this.searchLocation.bind(this);
+    this.getLocation = this.getLocation.bind(this);
     this.updateTitle = this.updateTitle.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -19,6 +22,9 @@ class CreateRoute extends React.Component {
     const initialPosition = { lat: 37.8029111, lng: -122.4632558 };
     const zoom = 15;
     this.initializeMap(initialPosition, zoom);
+
+    const input = document.getElementById('google-search-box');
+    new google.maps.places.SearchBox(input); // eslint-disable-line
   }
 
   initializeMap(initialPosition, zoom) {
@@ -27,17 +33,30 @@ class CreateRoute extends React.Component {
       zoom
     };
     this.map = new google.maps.Map(document.getElementById('map'), mapOptions); // eslint-disable-line
-    const route = new Route(this.map, this.setState.bind(this));
+    this.route = new Route(this.map, this.setState.bind(this));
 
+    this.addClickListener();
+  }
+
+  addClickListener() {
     this.map.addListener('click', e => {
       const lat = e.latLng.lat();
       const lng = e.latLng.lng();
       const waypoints = this.state.waypoints;
       this.setState({ waypoints: [...waypoints, { location: { lat, lng } }]});
 
-      route.getDirections(this.state.waypoints);
-      this.setState({ distance: route.distance });
+      this.directions = this.route.getDirections(this.state.waypoints);
+      // clear old directions
+      if (this.directions) { this.directions.setMap(null); }
     });
+  }
+
+  searchLocation(e) {
+    e.preventDefault();
+  }
+
+  getLocation() {
+
   }
 
   updateTitle(e) {
@@ -57,11 +76,21 @@ class CreateRoute extends React.Component {
       <section id='map-container'>
 
         <section id='map-side-panel'>
-          <h1>Map Side Panel</h1>
-          <h3>Distance</h3>
-          <h3>{this.state.distance}</h3>
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.searchLocation} id='location-search'>
+            <h4>Search Location</h4>
+            <p>(address, or city, or zip, etc.)</p>
+            <input id="google-search-box" type="text"></input>
+            <input type='submit' value='Search'></input>
+            <button onClick={this.getLocation}>Get Your Location</button>
+          </form>
 
+          <section id='distance'>
+            <h2>Distance:</h2>
+            <h2>{this.state.distance} mi</h2>
+          </section>
+
+          <form onSubmit={this.handleSubmit}>
+            <h2>Save Route</h2>
             <label>Title:
               <input type="text"
                      value={this.state.title}

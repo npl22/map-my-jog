@@ -5,6 +5,7 @@ class Route {
 
     this.distance = 0;
     this.directionsService = new google.maps.DirectionsService; // eslint-disable-line
+    this.directionsRenderer = null;
   }
 
   getDirections(waypoints) {
@@ -18,6 +19,8 @@ class Route {
 
     this.directionsService.route(directionsRequest, (response, status) =>
       this.renderDirections(response, status));
+
+    return this.directionsRenderer; // send directions to parent class
   }
 
   renderDirections(response, status) {
@@ -28,7 +31,7 @@ class Route {
         suppressMarkers: true,
         preserveViewport: true
       };
-      new google.maps.DirectionsRenderer(renderOptions); // eslint-disable-line
+      this.directionsRenderer = new google.maps.DirectionsRenderer(renderOptions); // eslint-disable-line
 
       const route = response.routes[0];
       this.calculateDistance(route);
@@ -53,6 +56,10 @@ class Route {
     for (let i = 1; i < route.legs.length; i++) {
       const marker = new google.maps.Marker({ // eslint-disable-line
         map: this.map,
+        label: { // eslint-disable-line
+          text: `${i}`,
+          fontWeight: "700"
+        },
         position: route.legs[i].start_location
       });
     }

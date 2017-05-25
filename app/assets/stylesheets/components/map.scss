@@ -4,19 +4,56 @@
 }
 
 #map {
-  width: 75vw;
+  width: 80vw;
   height: 95vh;
 }
 
 #map-side-panel {
-  border: 3px solid black;
+  width: 20vw;
+  border: 1px solid rgb(153, 153, 153);
 
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
-#map-side-panel h1 {
+#map-side-panel form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#map-side-panel p {
+  font-size: 10px;
+}
+
+#map-side-panel button, input[type=submit] {
+  padding: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #4499db 5%, #177ed7 100%);
+  border: none;
+  font-weight: 500;
+  border-radius: 5px;
+
+  color: #fff;
+  line-height: normal;
   text-align: center;
-  margin-top: -35%;
+  text-decoration: none;
+
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#map-side-panel button:hover, input[type=submit]:hover {
+  background: linear-gradient(to bottom, #3f92c6 5%, #0074bc 100%);
+}
+
+#map-side-panel #google-search-box {
+  padding: 10px;
+  width: 15vw;
+}
+
+#map-side-panel #location-search p {
+  margin-bottom: 10px;
 }
