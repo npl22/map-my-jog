@@ -13,20 +13,20 @@ const HeroPanel = () => (
         <Link to="/signup" className="button" id="splash-sign-up-btn">
           Sign Up
         </Link>
-        or
-        <Link to="#" className="button" id="splash-sign-up-btn">
+        &nbsp;&nbsp; or &nbsp;&nbsp;
+        <Link to="#" className="button" id="splash-guest-btn">
           Log In As Guest
-      </Link>
+        </Link>
     </div>
-      <div className="login-prompt">
-        Already a member? <Link className="button" id="splash-login-btn" to="/login">Log in</Link>
+    <div className="login-prompt">
+      Already a member? <Link className="button" id="splash-login-btn" to="/login">Log in</Link>
         <span className="terms-of-service">
           <p>
             By joining MapMyJog, you agree to the&nbsp;
             <a href="#">Terms &amp; Conditions</a>
              &nbsp;and&nbsp;
             <a href="#">Privacy Policy</a>
-        </p>
+          </p>
         </span>
       </div>
     </div>
