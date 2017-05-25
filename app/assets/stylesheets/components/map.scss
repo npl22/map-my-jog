@@ -28,6 +28,10 @@
   font-size: 10px;
 }
 
+#map-side-panel input {
+  padding: 5px;
+}
+
 #map-side-panel button, input[type=submit] {
   padding: 5px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -56,4 +60,14 @@
 
 #map-side-panel #location-search p {
   margin-bottom: 10px;
+}
+
+#map-side-panel #distance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#map-side-panel #save-route input {
+  margin-top: 10px;
 }

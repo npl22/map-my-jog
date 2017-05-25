@@ -89,16 +89,15 @@ class CreateRoute extends React.Component {
             <h2>{this.state.distance} mi</h2>
           </section>
 
-          <form onSubmit={this.handleSubmit}>
+          <form id='save-route' onSubmit={this.handleSubmit}>
             <h2>Save Route</h2>
-            <label>Title:
-              <input type="text"
-                     value={this.state.title}
-                     onChange={this.updateTitle}>
-              </input>
-            </label>
+            <input type="text"
+                   value={this.state.title}
+                   placeholder="Title"
+                   onChange={this.updateTitle}>
+            </input>
 
-            <input type="submit" value="Save Route"></input>
+            <input type="submit" value="Save"></input>
           </form>
         </section>
 
