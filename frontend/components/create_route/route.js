@@ -37,7 +37,7 @@ class Route {
       this.calculateDistance(route);
       this.addMarkers(route);
     } else {
-      window.alert('Directions request failed due to ' + status);
+      window.alert(`Request to get route failed, error message: \"${status}\"`);
     }
   }
 

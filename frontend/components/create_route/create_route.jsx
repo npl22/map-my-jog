@@ -1,6 +1,5 @@
 import React from 'react';
 
-// import SidePanel from './side_panel';
 import Route from './route';
 
 class CreateRoute extends React.Component {
@@ -17,7 +16,7 @@ class CreateRoute extends React.Component {
   }
 
   componentDidMount() {
-    const initialPosition = { lat: 37.8029111, lng: -122.4632558 };
+    const initialPosition = { lat: 37.7989111, lng: -122.4642558 };
     const zoom = 15;
     this.initializeMap(initialPosition, zoom);
     this.initializeSearchBox();
@@ -39,7 +38,7 @@ class CreateRoute extends React.Component {
           map.fitBounds(place.geometry.viewport);
         } else {
           map.setCenter(place.geometry.location);
-          map.setZoom(16);
+          map.setZoom(15);
         }
       });
     });
@@ -100,6 +99,9 @@ class CreateRoute extends React.Component {
     return (
       <section id='map-container'>
 
+        <section id='map'>
+        </section>
+
         <section id='map-side-panel'>
           <form id='location-search'>
             <h4>Search Location</h4>
@@ -124,9 +126,6 @@ class CreateRoute extends React.Component {
 
             <input type="submit" value="Save"></input>
           </form>
-        </section>
-
-        <section id='map'>
         </section>
 
       </section>
