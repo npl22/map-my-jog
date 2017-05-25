@@ -7,7 +7,7 @@ const HeroPanel = () => (
       <h1>Make Every Mile Count,</h1>
       <h1>join free today</h1>
       <p>
-        You pound the pavement, we provide the motivation. Plan each stride and <br />learn from every route with MapMyRun.
+        You pound the pavement, we provide the motivation. Plan each stride and <br />learn from every route with MapMyJog.
       </p>
       <div id="signup">
         <Link to="/signup" className="button" id="splash-sign-up-btn">

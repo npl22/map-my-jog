@@ -95,6 +95,13 @@ class CreateRoute extends React.Component {
     this.props.createRoute({ route });
   }
 
+  renderErrors() {
+    if (this.props.errors.length < 1) return;
+    return (
+      <p className='errors'>Error: { this.props.errors }</p>
+    );
+  }
+
   render () {
     return (
       <section id='map-container'>
@@ -126,7 +133,11 @@ class CreateRoute extends React.Component {
                    onChange={this.updateTitle}>
             </input>
 
+            { this.renderErrors() }
+
             <input type="submit" value="Save"></input>
+
+
           </form>
         </section>
 

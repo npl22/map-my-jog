@@ -5,7 +5,8 @@ import { createRoute } from '../../actions/route_actions';
 
 const mapStateToProps = (state) => ({
   session: state.session,
-  routes: state.routes
+  routes: state.routes,
+  errors: state.routes.errors
 });
 
 const mapDispatchToProps = dispatch => ({
