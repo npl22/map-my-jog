@@ -118,6 +118,12 @@
   white-space: nowrap;
 }
 
+@media screen and (min-width: 1368px) {
+    #splash-page-hero h1 {
+      font-size: 44px;
+    }
+}
+
 // Temp Panels (will replace later)-------------------------
 #splash-page-features {
   width: 100vw;
