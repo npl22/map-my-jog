@@ -31,6 +31,7 @@ class SessionForm extends React.Component {
   }
 
   guestLogin(e) {
+    e.preventDefault();
     const user = { username: 'guest', password: 'password' };
     this.props.guestLogin({user});
   }
@@ -44,8 +45,9 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
+    if (this.props.errors.length < 1) return;
     return(
-      <ul>
+      <ul className='errors'>
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
@@ -58,12 +60,15 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="session-form-container">
+        <h1>Please Log In or Sign Up to see more</h1>
+
         <form onSubmit={this.handleSubmit}>
 
           <p>or {this.navLink()}</p>
-          {this.renderErrors()}
 
-          <div className="login-form">
+          { this.renderErrors() }
+
+          <div className="session-form">
             <button className='login guest-login'
                     onClick={this.guestLogin}>Login as Guest</button>
 
@@ -95,7 +100,9 @@ class SessionForm extends React.Component {
 
             <br/>
 
-            <input className='login' type="submit" value="Login" />
+            <input className='login'
+                   type="submit"
+                   value="Login" />
           </div>
 
         </form>
