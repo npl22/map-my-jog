@@ -72,7 +72,8 @@ class CreateRoute extends React.Component {
     });
   }
 
-  getLocation() {
+  getLocation(e) {
+    e.preventDefault();
     const map = this.map;
     const success = response => {
       const lat = response.coords.latitude;
