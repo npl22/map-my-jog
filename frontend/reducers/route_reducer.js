@@ -7,14 +7,15 @@ import {
 } from '../actions/route_actions';
 
 const initialState = Object.freeze({
-  1: {
-    id: 1,
-    title: "",
-    waypoints: [],
-    distance: 0,
-    user_id: null,
+  allRoutes: {
+    1: { id: 1,
+         title: "",
+         waypoints: [],
+         distance: 0,
+         user_id: null,
+       }
+     },
     errors: []
-  }
 });
 
 const routeReducer = (state = initialState, action) => {

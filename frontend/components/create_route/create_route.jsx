@@ -96,6 +96,7 @@ class CreateRoute extends React.Component {
   }
 
   renderErrors() {
+    console.log(this.props);
     if (this.props.errors.length < 1) return;
     return (
       <p className='errors'>Error: { this.props.errors }</p>

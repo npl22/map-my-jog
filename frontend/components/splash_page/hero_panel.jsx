@@ -16,8 +16,9 @@ class HeroPanel extends React.Component {
   }
 
   handleGuestLogin(e) {
-    this.props.guestLogin({user: {username: "guest", password: "password"}});
-    this.setState({ username: "guest", password: "password" });
+    this.props.guestLogin({user: {username: "guest", password: "password"}})
+      .then(() => this.props.history.push('/create-route'));
+
   }
 
   render() {
