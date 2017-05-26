@@ -3,6 +3,10 @@ import React from 'react';
 const Footer = () => (
   <div>
     <footer>
+      <div className="phone">
+        <img className="phone-img" src="https://res.cloudinary.com/nathanpli/image/upload/v1495765311/phone_shfazn.png" />
+      </div>
+
       <div className="links-container">
         <ul className="links-col">
           <li className="link-header">Social</li>
@@ -22,6 +26,8 @@ const Footer = () => (
           <li><a className="link" href="#">Join Our Team</a></li>
           <li><a className="link" href="#">Shop Under Armour</a></li>
         </ul>
+      </div>
+      <div className="app-links-container">
         <ul className="links-col">
           <li className="link-header app-link-header">UA Fitness Community</li>
           <div className="app-links">
@@ -51,7 +57,3 @@ const Footer = () => (
 );
 
 export default Footer;
-
-// <div className="phone">
-//   <img className="phone-img" src="https://res.cloudinary.com/nathanpli/image/upload/v1495765311/phone_shfazn.png" />
-// </div>
