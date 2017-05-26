@@ -7,7 +7,7 @@
 # MapMyJog
 
 
-[Link to live site (MapMyJog)](https://map-my-jog.herokuapp.com)
+[Link to live site](https://map-my-jog.herokuapp.com)
 
 
 MapMyJog is full-stack web application clone of MapMyRun, using Ruby on Rails with a PostgreSQL database on the backend and React.js/Redux on the frontend. Users are able to map out the paths they have walked/run and keep track of the total distance of the planned routes.
@@ -55,47 +55,12 @@ addClickListener() {
   });
 }
 ```
-<!-- ---
-Each click creates a new marker on the map that is stored in the component's state. Once there are two or more markers, directions are rendered onto the map.
-
-![Undo/Clear button](app/assets/images/undoclear.png)
-
-Unfortunately, Google Maps API did not have the ability to undo and clear out the map with markers. So I made my own. When undoing a marker and having two or more, I was able to get new directions and render it on my map. However, you are only able to get directions with more than one point.
-
-My initial solution was to create a new instance of Map, but reloading a new instance caused a flashing that ruined the user experience.
-
-My final solution was to remove the directions object off my map whenever I had less than two points. This avoided the flashing of the screen while allowing the user to undo or clear out the map.
-
----
-```javascript
-clearDirections() {
-  this.directionsRenderer.setMap(null);
-  this.directionsRenderer = new google.maps.DirectionsRenderer(
-    {
-      map: this.map,
-      preserveViewport: true,
-    }
-  );
-  this.updateState({
-    distance: 0,
-    polyline: '',
-    start_address: 'N/A',
-    end_address: 'N/A'
-  });
-}
-```
-
----
-This created a much smoother experience for the user to create their route. -->
 
 
----
-### JSON Stringify
+### TODO: JSON Stringify
 
 
----
-
-### Error Handling or Guest Login
+### TODO: Error Handling or Guest Login
 
 
 ## Future Directions for the Project
