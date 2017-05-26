@@ -165,12 +165,7 @@ export default withRouter(CreateRoute);
 // </form>
 
 // testing
-// this.state.waypoints = [
-//   { location: { lat: 37.803072, lng: -122.460548 } },
-//   { location: { lat: 37.803564, lng: -122.466921 } },
-//   { location: { lat: 37.807938, lng: -122.471127 } },
-//   { location: { lat: 37.804255, lng: -122.454149 } }
-// ];
+
 // this.state.user_id = this.props.session.currentUser.id;
 // this.state.waypoints = JSON.stringify(this.state.waypoints);
 // this.state.title = "Presidio 2";
