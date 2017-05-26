@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const HeroPanel = () => (
+
+const HeroPanel = ({guestLogin}) => (
   <section id="splash-page-hero">
     <div className="hero-img-content">
       <h1>Make Every Mile Count,</h1>
@@ -14,7 +15,8 @@ const HeroPanel = () => (
           Sign Up
         </Link>
         &nbsp;&nbsp; or &nbsp;&nbsp;
-        <Link to="#" className="button" id="splash-guest-btn">
+        <Link to="/create-route" className="button" id="splash-guest-btn"
+          onClick={ guestLogin({user: {username: "guest", password: "password"}}) }>
           Log In As Guest
         </Link>
     </div>

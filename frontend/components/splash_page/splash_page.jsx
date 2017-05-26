@@ -5,13 +5,15 @@ import FeaturePanel from './feature_panel';
 import CitiesPanel from './cities_panel';
 import Footer from '../shared/footer';
 
-const SplashPage = () => (
-  <section id="page_content" className="content">
-    <HeroPanel />
-    <FeaturePanel />
-    <CitiesPanel />
-    <Footer />
-  </section>
-);
+const SplashPage = (props) => {
+  return (
+    <section id="page_content" className="content">
+      <HeroPanel guestLogin={props.guestLogin} />
+      <FeaturePanel />
+      <CitiesPanel />
+      <Footer />
+    </section>
+  );
+};
 
 export default SplashPage;
