@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+import Footer from '../shared/footer';
+
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -107,6 +109,8 @@ class SessionForm extends React.Component {
           </div>
 
         </form>
+
+        <Footer />
       </div>
     );
   }

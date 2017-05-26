@@ -19,7 +19,6 @@ const App = () => (
       <ProtectedRoute path="/home" component={HomepageContainer} />
       <ProtectedRoute path="/create-route" component={CreateRouteContainer} />
     </Switch>
-    <Footer />
   </div>
 );
 
