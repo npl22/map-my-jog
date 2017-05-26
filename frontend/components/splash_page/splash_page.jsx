@@ -8,7 +8,7 @@ import Footer from '../shared/footer';
 const SplashPage = (props) => {
   return (
     <section id="page_content" className="content">
-      <HeroPanel guestLogin={props.guestLogin} />
+      <HeroPanel guestLogin={props.guestLogin} session={props.session} />
       <FeaturePanel />
       <CitiesPanel />
       <Footer />
