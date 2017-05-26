@@ -3,11 +3,6 @@ import React from 'react';
 const Footer = () => (
   <div>
     <footer>
-
-      <div className="phone">
-        <img className="phone-img" src="https://res.cloudinary.com/nathanpli/image/upload/v1495765311/phone_shfazn.png" />
-      </div>
-
       <div className="links-container">
         <ul className="links-col">
           <li className="link-header">Social</li>
@@ -56,3 +51,7 @@ const Footer = () => (
 );
 
 export default Footer;
+
+// <div className="phone">
+//   <img className="phone-img" src="https://res.cloudinary.com/nathanpli/image/upload/v1495765311/phone_shfazn.png" />
+// </div>
