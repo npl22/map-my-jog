@@ -37,7 +37,7 @@ class Route {
       this.calculateDistance(route);
       this.addMarkers(route);
     } else {
-      window.alert(`Request to get route failed, error message: \"${status}\"`);
+      window.alert("Max number of waypoints exceeded");
     }
   }
 
