@@ -33,13 +33,18 @@ class NavBar extends React.Component {
         <ul>
           <li><Link className="nav-logo" to="/"></Link></li>
           <li><Link to="/create-route">Create a Route</Link></li>
-          <li><Link to="/home">My Routes</Link></li>
+          <li>
+            <a href="https://github.com/npl22/MapMyJog/blob/master/README.md">
+              Readme
+            </a>
+          </li>
           <li><a href="https://github.com/npl22/MapMyJog">Github</a></li>
         </ul>
 
         { authLinks }
       </nav>
     );
+
   }
 }
 
