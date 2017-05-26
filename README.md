@@ -1,10 +1,8 @@
-# README
-
-* Description of App and features
-* Screenshot of sample route
-* Screenshot of API tests in Postman
-
 # MapMyJog
+
+<!-- * Description of App and features
+* Screenshot of sample route
+* Screenshot of API tests in Postman -->
 
 
 [Link to live site](https://map-my-jog.herokuapp.com)
