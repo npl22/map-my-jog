@@ -130,7 +130,6 @@
   height: 50vh;
   min-height: 250px;
   background-image: linear-gradient(rgb(233, 230, 229) 0%, rgb(239, 238, 238) 100%);
-  // background-image: url(https://res.cloudinary.com/nathanpli/image/upload/v1495410800/temp_panel1_lstf54.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -144,11 +143,17 @@
   flex-direction: row;
   width: 100vw;
   justify-content: center;
+  background: url(https://res.cloudinary.com/nathanpli/image/upload/v1495756314/feature_bg_zuvmmu.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 125px;
+  padding-left: 40px;
+  margin-top: -20px;
 }
 
 .feature {
   max-width: 200px;
-  margin-right: 50px;
+  margin-right: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -177,19 +182,11 @@
     color: #2f98d9;
     cursor: pointer;
     text-decoration: none;
+    margin-top: 5px;
   }
 
   a:hover {
     color: #92BFDD;
+    text-decoration: underline;
   }
-}
-
-#splash-page-cities-list {
-  width: 100vw;
-  height: 100vh;
-  min-height: 275px;
-  background-image: url(https://res.cloudinary.com/nathanpli/image/upload/v1495410803/temp_panel2_entvjd.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
