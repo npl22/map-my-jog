@@ -1,10 +1,20 @@
 footer {
   background: url(https://res.cloudinary.com/nathanpli/image/upload/v1495756129/footer_bg_t0ebyc.png);
+  background-repeat: repeat;
   padding: 10px;
   color: white;
 
+  position: relative;
   display: flex;
   justify-content: center;
+}
+
+.phone-img {
+  position: absolute;
+  top: -135px;
+  left: 100px;
+  width: 150px;
+  height: 300px;
 }
 
 .links-container {
@@ -27,10 +37,6 @@ footer .link {
 
 footer ul {
   display: inline-block;
-}
-
-footer img {
-  display: none;
 }
 
 .app-links {
@@ -71,3 +77,30 @@ footer img {
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+.copyright {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.copyright-text {
+  margin-right: 5%;
+}
+
+.copyright-link {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid rgb(102, 102, 102);
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.copyright-link-noborder {
+  border: none;
+}
+
+// .copyright-link-container {
+//   display: flex;
+// }
