@@ -1,7 +1,6 @@
 class Api::RoutesController < ApplicationController
   def index
     @routes = Route.all
-    render 'api/googlec7bcdb0d2df39ac7.html'
   end
 
   def create
