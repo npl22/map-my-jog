@@ -129,10 +129,58 @@
   width: 100vw;
   height: 50vh;
   min-height: 250px;
-  background-image: url(https://res.cloudinary.com/nathanpli/image/upload/v1495410800/temp_panel1_lstf54.png);
+  background-image: linear-gradient(rgb(233, 230, 229) 0%, rgb(239, 238, 238) 100%);
+  // background-image: url(https://res.cloudinary.com/nathanpli/image/upload/v1495410800/temp_panel1_lstf54.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  cursor: text;
+}
+
+#splash-page-features .container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: space-around;
+}
+
+.feature {
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2, p, a {
+    display: block;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #999;
+  }
+
+  p {
+    font-size: 12px;
+    font-weight: 200;
+    color: #666;
+  }
+
+  a {
+    font-size: 12px;
+    font-weight: 400;
+    color: #2f98d9;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #92BFDD;
+  }
 }
 
 #splash-page-cities-list {
