@@ -14,10 +14,9 @@ MapMyJog is full-stack web application clone of MapMyRun, using Ruby on Rails wi
 
 ### Path creation
 
-The core feature of this application is the utilization of Google Maps API to mark and render the routes.
+The core feature of this application is utilizing Google Maps APIs to mark and render running routes.
 
 ![Route Creation](app/assets/images/map_creation.png)
-
 
 
 This map utilizes 3 APIs, the core Google Maps JavaScript API, the Directions Service API, and the Google Places Web Service API. Users can add markers to the map by clicking on it, and on each click, the app will get walking directions for the current route.
@@ -55,13 +54,6 @@ addClickListener() {
   });
 }
 ```
-
-
-### TODO: JSON Stringify
-
-
-### TODO: Error Handling or Guest Login
-
 
 ## Future Directions for the Project
 
