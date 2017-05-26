@@ -24,13 +24,13 @@ class CreateRoute extends React.Component {
 
   initializeSearchBox() {
     const input = document.getElementById('google-search-box');
-    const searchBox = new google.maps.places.SearchBox(input); // eslint-disable-line
+    const searchBox = new google.maps.places.SearchBox(input);
     const map = this.map;
     searchBox.addListener('places_changed', function() {
       const places = searchBox.getPlaces();
       if (places.length === 0) return;
 
-      const bounds = new google.maps.LatLngBounds(); // eslint-disable-line
+      const bounds = new google.maps.LatLngBounds();
       places.forEach(function(place) {
         if (!place.geometry) return;
 
@@ -47,9 +47,10 @@ class CreateRoute extends React.Component {
   initializeMap(initialPosition, zoom) {
     const mapOptions = {
       center: initialPosition,
-      zoom
+      zoom,
+      draggableCursor: 'default'
     };
-    this.map = new google.maps.Map(document.getElementById('map'), mapOptions); // eslint-disable-line
+    this.map = new google.maps.Map(document.getElementById('map'), mapOptions);
     this.route = new Route(this.map, this.setState.bind(this));
 
     this.addClickListener();
@@ -77,7 +78,7 @@ class CreateRoute extends React.Component {
       map.setZoom(15);
     };
     const error = err => {
-      console.log(err);
+
     };
 
     navigator.geolocation.getCurrentPosition(success, error);

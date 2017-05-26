@@ -13,8 +13,6 @@ class Homepage extends React.Component {
 
   render() {
     const { routes } = this.props;
-    console.log("hello");
-    window.props = this.props;
     return (
       <section className="route-index">
         <h1>My Routes</h1>
