@@ -1,10 +1,28 @@
 import React from 'react';
 
-const Homepage = ({ logout }) => (
-  <div>
-    <h1>Homepage</h1>
-    <button onClick={logout}>Log Out</button>
-  </div>
-);
+import RouteIndexItem from './route_index_item';
+
+class Homepage extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    this.props.fetchRoutes();
+  }
+
+  render() {
+    const { routes } = this.props;
+    console.log("hello");
+    window.props = this.props;
+    return (
+      <section className="route-index">
+        <h1>My Routes</h1>
+        {routes.map((route,i) =>
+          <RouteIndexItem key={`route-${i}`} route={route}/>)}
+      </section>
+    );
+  }
+}
 
 export default Homepage;

@@ -1,6 +1,7 @@
 class Api::RoutesController < ApplicationController
   def index
     @routes = Route.all
+    render 'api/routes/index'
   end
 
   def create

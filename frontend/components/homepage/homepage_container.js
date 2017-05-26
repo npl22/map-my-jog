@@ -1,14 +1,15 @@
 import { connect } from 'react-redux';
 
-import { logout } from '../../actions/session_actions';
+import { fetchRoutes } from '../../actions/route_actions';
+import { routesArray } from '../../reducers/selectors';
 import Homepage from './homepage';
 
-const mapStateToProps = ({ session }) => ({
-  currentUser: session.currentUser
+const mapStateToProps = (state) => ({
+  routes: routesArray(state.routes)
 });
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout())
+  fetchRoutes: () => dispatch(fetchRoutes())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Homepage);

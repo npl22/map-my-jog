@@ -9,9 +9,9 @@ export const receiveRoute = route => ({
   route
 });
 
-export const receiveRoutes = route => ({
+export const receiveRoutes = routes => ({
   type: RECEIVE_ROUTES,
-  route
+  routes
 });
 
 export const receiveRouteErrors = errors => ({
@@ -22,7 +22,7 @@ export const receiveRouteErrors = errors => ({
 export const fetchRoutes = () => dispatch => {
   return (
     RouteAPIUtil.fetchRoutes().then(ajaxResponse => (
-      dispatch(fetchRoutes(ajaxResponse))
+      dispatch(receiveRoutes(ajaxResponse))
     ))
   );
 };
