@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 import Route from './route';
 
@@ -11,6 +12,8 @@ class CreateRoute extends React.Component {
     this.directions = null;
 
     this.getLocation = this.getLocation.bind(this);
+    this.undoClick = this.undoClick.bind(this);
+    this.clearMarkers = this.clearMarkers.bind(this);
     this.updateTitle = this.updateTitle.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -84,6 +87,15 @@ class CreateRoute extends React.Component {
     navigator.geolocation.getCurrentPosition(success, error);
   }
 
+  undoClick(e) {
+    const waypoints = this.state.waypoints;
+    this.setState({ waypoints: waypoints.slice(0, waypoints.length-1)});
+  }
+
+  clearMarkers(e) {
+    this.props.history.push("/login");
+  }
+
   updateTitle(e) {
     this.setState({ title: e.target.value });
   }
@@ -126,20 +138,9 @@ class CreateRoute extends React.Component {
             <h2>{this.state.distance} mi</h2>
           </section>
 
-          <form id='save-route' onSubmit={this.handleSubmit}>
-            <h2>Save Route</h2>
-            <input type="text"
-                   value={this.state.title}
-                   placeholder="Title"
-                   onChange={this.updateTitle}>
-            </input>
-
-            { this.renderErrors() }
-
-            <input type="submit" value="Save"></input>
-
-
-          </form>
+          <section id="undo">
+            <button onClick={this.clearMarkers}>Clear Route</button>
+          </section>
         </section>
 
       </section>
@@ -147,7 +148,21 @@ class CreateRoute extends React.Component {
   }
 }
 
-export default CreateRoute;
+export default withRouter(CreateRoute);
+
+// <form id='save-route' onSubmit={this.handleSubmit}>
+//   <h2>Save Route</h2>
+//   <input type="text"
+//          value={this.state.title}
+//          placeholder="Title"
+//          onChange={this.updateTitle}>
+//   </input>
+//
+//   { this.renderErrors() }
+//
+//   <input type="submit" value="Save"></input>
+//
+// </form>
 
 // testing
 // this.state.waypoints = [

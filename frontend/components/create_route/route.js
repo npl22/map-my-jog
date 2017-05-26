@@ -4,7 +4,8 @@ class Route {
     this.setState = setState;
 
     this.distance = 0;
-    this.directionsService = new google.maps.DirectionsService; 
+    this.markers = [];
+    this.directionsService = new google.maps.DirectionsService;
     this.directionsRenderer = null;
   }
 
@@ -31,7 +32,7 @@ class Route {
         suppressMarkers: true,
         preserveViewport: true
       };
-      this.directionsRenderer = new google.maps.DirectionsRenderer(renderOptions); 
+      this.directionsRenderer = new google.maps.DirectionsRenderer(renderOptions);
 
       const route = response.routes[0];
       this.calculateDistance(route);
@@ -54,22 +55,25 @@ class Route {
   addMarkers(route) {
     // render markers
     for (let i = 1; i < route.legs.length; i++) {
-      const marker = new google.maps.Marker({ 
+      const marker = new google.maps.Marker({
         map: this.map,
-        label: { 
+        label: {
           text: `${i}`,
           fontWeight: "700"
         },
         position: route.legs[i].start_location
       });
+
+      this.markers.push(marker);
     }
 
     // make last one animate
-    const marker = new google.maps.Marker({ 
+    const marker = new google.maps.Marker({
       map: this.map,
       position: route.legs[route.legs.length-1].end_location,
       animation: google.maps.Animation.DROP //eslint-disable-line
     });
+    this.markers.push(marker);
   }
 }
 
