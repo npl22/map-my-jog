@@ -4,7 +4,7 @@
 * Screenshot of sample route
 * Screenshot of API tests in Postman
 
-# MapMyPath
+# MapMyJog
 
 
 [Link to live site (MapMyJog)](https://map-my-jog.herokuapp.com)
@@ -110,4 +110,4 @@ Besides mapping and saving routes, I want users to be able to record runs as wel
 
 #### Dashboard/Statistics
 
-A great feature to have on the user profile page would be a dashboard that keeps track of a user's running statistics.  I think that the dashboard on MapMyRun and other running sites can be greatly improved. 
+A great feature to have on the user profile page would be a dashboard that keeps track of a user's running statistics.  I think that the dashboard on MapMyRun and other running sites can be greatly improved.
