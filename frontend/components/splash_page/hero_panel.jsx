@@ -34,7 +34,7 @@ class HeroPanel extends React.Component {
               Sign Up
             </Link>
             &nbsp;&nbsp; or &nbsp;&nbsp;
-            <a href="#" className="button" id="splash-guest-btn"
+            <a href="/#/" className="button" id="splash-guest-btn"
               onClick={this.handleGuestLogin}>
               Log In As Guest
             </a>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
 
-import NavBar from './shared/nav_bar';
+import NavBarContainer from './shared/nav_bar_container';
 import SplashPageContainer from './splash_page/splash_page_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SessionFormContainer from './session_form/session_form_container';
@@ -11,7 +11,7 @@ import Footer from './shared/footer';
 
 const App = () => (
   <div>
-    <NavBar />
+    <NavBarContainer />
     <Route exact path="/" component={SplashPageContainer} />
     <Switch>
       <ProtectedRoute path="/create-route" component={CreateRouteContainer} />

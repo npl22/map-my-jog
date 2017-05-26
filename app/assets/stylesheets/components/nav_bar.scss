@@ -18,7 +18,8 @@ nav a {
 }
 
 nav a:hover {
-
+  color: #222628;
+  text-decoration: underline;
 }
 
 .nav-logo {
@@ -29,4 +30,16 @@ nav a:hover {
 
 .nav-login-signup {
   margin-right: 5%;
+}
+
+.nav-login-signup li {
+}
+
+.nav-logout {
+  margin-right: 8%;
+}
+
+.nav-logout li {
+  font-weight: 700;
+  text-decoration: underline;
 }
