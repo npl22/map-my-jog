@@ -62,54 +62,55 @@ class SessionForm extends React.Component {
   render() {
     const formType = this.props.formType;
     return (
-      <div className="session-form-container">
-        <h2>Please { formType } to see more</h2>
+      <div>
+        <div className="session-form-container">
+          <h2>Please { formType } to see more</h2>
 
-        <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit}>
 
-          <p>or {this.navLink()}</p>
+            <p>or {this.navLink()}</p>
 
-          { this.renderErrors() }
+            { this.renderErrors() }
 
-          <div className="session-form">
-            <button className='login guest-login'
-                    onClick={this.guestLogin}>Login as Guest</button>
+            <div className="session-form">
+              <button className='login guest-login'
+                      onClick={this.guestLogin}>Login as Guest</button>
 
-            <br/>
+              <br/>
 
-            <div className="or-divider">
-              <span className="horizontal-line"></span>
-              <span id="or-divider-text">or</span>
-              <span className="horizontal-line"></span>
+              <div className="or-divider">
+                <span className="horizontal-line"></span>
+                <span id="or-divider-text">or</span>
+                <span className="horizontal-line"></span>
+              </div>
+
+              <br/>
+
+              <input id="username" type="text"
+                value={this.state.username}
+                onChange={this.update('username')}
+                className="session-form-input"
+                placeholder="Username"
+              />
+
+              <br/>
+
+              <input id="password" type="password"
+                value={this.state.password}
+                onChange={this.update('password')}
+                className="session-form-input"
+                placeholder="Password"
+              />
+
+              <br/>
+
+              <input className='login'
+                     type="submit"
+                     value={ `${formType}` } />
             </div>
 
-            <br/>
-
-            <input id="username" type="text"
-              value={this.state.username}
-              onChange={this.update('username')}
-              className="session-form-input"
-              placeholder="Username"
-            />
-
-            <br/>
-
-            <input id="password" type="password"
-              value={this.state.password}
-              onChange={this.update('password')}
-              className="session-form-input"
-              placeholder="Password"
-            />
-
-            <br/>
-
-            <input className='login'
-                   type="submit"
-                   value={ `${formType}` } />
-          </div>
-
-        </form>
-
+          </form>
+        </div>
         <Footer />
       </div>
     );
