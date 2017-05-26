@@ -14,7 +14,7 @@ class Api::RoutesController < ApplicationController
   end
 
   def show
-    @route = Route.find(params[:id])
+    @route = Route.find_by(id: params[:id])
     if @route
       render 'api/routes/show'
     else
