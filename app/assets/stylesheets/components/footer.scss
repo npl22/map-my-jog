@@ -4,7 +4,11 @@ footer {
   color: white;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+.links-container {
+  display: flex;
 }
 
 footer .link-header {
@@ -27,4 +31,43 @@ footer ul {
 
 footer img {
   display: none;
+}
+
+.app-links {
+  display: flex;
+}
+
+.app-link-header {
+  margin-left: 12px;
+}
+
+.app-icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 22px;
+  margin-left: 10px;
+}
+
+.record-icon {
+  background-image: url(https://res.cloudinary.com/nathanpli/image/upload/v1495758234/app1_ac9eiw.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.endo-icon {
+  background: url(https://res.cloudinary.com/nathanpli/image/upload/v1495758234/app2_pxoy3q.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.mfp-icon {
+  background: url(https://res.cloudinary.com/nathanpli/image/upload/v1495758234/app3_i1cpoc.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.mmf-icon {
+  background: url(https://res.cloudinary.com/nathanpli/image/upload/v1495758234/app4_htytcs.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
