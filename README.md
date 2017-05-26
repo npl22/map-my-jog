@@ -20,6 +20,8 @@ The core feature of this application is the utilization of Google Maps API to ma
 
 ![Route Creation](app/assets/images/map_creation.png)
 
+
+
 This map utilizes 3 APIs, the core Google Maps JavaScript API, the Directions Service API, and the Google Places Web Service API. Users can add markers to the map by clicking on it, and on each click, the app will get walking directions for the current route.
 
 Some notable customizations this app uses for a smooth user experience are,
@@ -28,6 +30,8 @@ Some notable customizations this app uses for a smooth user experience are,
 3) Search by location or get current location
 4) Custom markers and labels on map
 5) Cumulative distance-display for all route legs
+
+
 
 ```javascript
 initializeMap(initialPosition, zoom) {
