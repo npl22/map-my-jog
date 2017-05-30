@@ -130,6 +130,11 @@ class CreateRoute extends React.Component {
             <input id="google-search-box" type="text"></input>
           </form>
 
+          <div className="or-divider">
+            <span id="or-divider-text">or</span>
+          </div>
+          <button onClick={this.getLocation}>Get Your Location</button>
+
           <section id='distance'>
             <h2>Distance:</h2>
             <h2>{this.state.distance} mi</h2>
@@ -146,11 +151,6 @@ class CreateRoute extends React.Component {
 }
 
 export default withRouter(CreateRoute);
-
-// <div className="or-divider">
-//   <span id="or-divider-text">or</span>
-// </div>
-// <button onClick={this.getLocation}>Get Your Location</button>
 
 // <form id='save-route' onSubmit={this.handleSubmit}>
 //   <h2>Save Route</h2>
