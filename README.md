@@ -5,7 +5,7 @@
 * Screenshot of API tests in Postman -->
 
 
-[Link to live site](https://map-my-jog.herokuapp.com)
+[Link to live site](https://www.mapmyjog.com)
 
 
 MapMyJog is full-stack web application clone of MapMyRun, using Ruby on Rails with a PostgreSQL database on the backend and React.js/Redux on the frontend. Users are able to map out the paths they have walked/run and keep track of the total distance of the planned routes.
