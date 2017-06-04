@@ -10,8 +10,10 @@
 
 **SplashPageContainer**
 + SplashPage
+    + HeroPanel
+    + FeaturePanel
 
-## Homepage
+<!-- ## Homepage
 
 **HomePageContainer**
 + HomePage
@@ -32,7 +34,7 @@
 + Dashboard
     + DashboardStats
     + RecentRoutes
-        + RecentRouteItem
+        + RecentRouteItem -->
 
 ## Creating Routes
 
@@ -41,15 +43,15 @@
     + MapSidePanelContainer
     + Map
 
-**MapSidePanelContainer**
+<!-- **MapSidePanelContainer**
 + MapSidePanel
     + SearchContainer
     + RouteStats
 
 **SearchContainer**
-+ Search
++ Search -->
 
-## Finding Routes
+<!-- ## Finding Routes
 
 **FindRouteContainer**
 + FindRoute
@@ -64,7 +66,7 @@
 + RouteDetail
     + RouteStats
     + Map
-+ CommentContainer
++ CommentContainer -->
 
 ## Routes
 
@@ -73,9 +75,9 @@
 | / | SplashPageContainer |
 | /sign-up | LoginFormContainer |
 | /log-in | LoginFormContainer |
-| /home | HomePageContainer |
+<!-- | /home | HomePageContainer |
 | /home/activity-feed | ActivityFeedContainer |
-| /home/dashboard | DashboardContainer |
+| /home/dashboard | DashboardContainer | -->
 | /create-route | CreateRouteContainer |
-| /find-route | FindRouteContainer |
-| /route/:routeId | RouteDetailContainer |
+<!-- | /find-route | FindRouteContainer |
+| /route/:routeId | RouteDetailContainer | -->

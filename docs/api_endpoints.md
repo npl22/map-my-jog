@@ -16,7 +16,7 @@
 - `POST /api/session`
 - `DELETE /api/session`
 
-### Routes
+<!-- ### Routes
 - `GET /api/routes`
 - `POST /api/routes`
 - `GET /api/routes/:id`
@@ -31,4 +31,4 @@
 ### Comments
 - `POST /api/comments`
 - `PATCH /api/comments/:id`
-- `DELETE /api/comments/:id`
+- `DELETE /api/comments/:id` -->
