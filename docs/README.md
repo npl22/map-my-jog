@@ -38,11 +38,19 @@ sufficient CSS styling:
 
 ## Implementation Timeline
 
-### Phase 1: Backend setup and Front End User Authentication (2 days, Wed, May 17)
+### Phase 1: Backend setup and Front End User Authentication (2 days, Fri, May 19)
 
 **Objective:** Functioning rails project with front-end Authentication
 
-### Phase 2: Running routes (3 days, Sat, May 20)
+### Phase 2: Splash Page and Login Form (3 days, Mon, May 22)
+
+**Objective:** Completely styled splash page and login form with guest login functionality.
+
+### Phase 3: Create routes integration with Google Maps API (4 days, Fri, May 26)
+
+**Objective:** Users can follow each other, see activity of users they've followed, and comment on others' activity
+
+<!-- ### Phase 2: Running routes (3 days, Sat, May 20)
 
 **Objective:** Routes can be created, read, edited and destroyed through
 the API.
@@ -57,7 +65,7 @@ the API.
 
 ### Phase 5: Complex Styling, (2 days, Fri May 26)
 
-**Objective:** Make styling look more professional, add final touches.
+**Objective:** Make styling look more professional, add final touches. -->
 
 ### Bonus Features (TBD)
 - [ ] Revamp look of MayMyRun into something better
