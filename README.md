@@ -28,8 +28,6 @@ Some notable customizations this app uses for a smooth user experience are,
 4) Custom markers and labels on map
 5) Cumulative distance-display for all route legs
 
-
-
 ```javascript
 initializeMap(initialPosition, zoom) {
   const mapOptions = {
@@ -55,7 +53,7 @@ addClickListener() {
 }
 ```
 
-## Future Directions for the Project
+## Future Updates
 
 #### Saving Routes/My Routes Page
 
